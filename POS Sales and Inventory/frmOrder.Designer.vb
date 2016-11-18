@@ -408,9 +408,9 @@ Partial Class frmOrder
         Me.Label2.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(13, 144)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(86, 17)
+        Me.Label2.Size = New System.Drawing.Size(80, 17)
         Me.Label2.TabIndex = 121
-        Me.Label2.Text = "Distributor ID"
+        Me.Label2.Text = "Customer ID"
         '
         'Label6
         '
@@ -418,9 +418,9 @@ Partial Class frmOrder
         Me.Label6.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.Location = New System.Drawing.Point(13, 177)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(104, 17)
+        Me.Label6.Size = New System.Drawing.Size(98, 17)
         Me.Label6.TabIndex = 122
-        Me.Label6.Text = "Distributor Name"
+        Me.Label6.Text = "Customer Name"
         '
         'Button2
         '
