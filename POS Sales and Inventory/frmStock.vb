@@ -35,7 +35,7 @@ Public Class frmStock
         End Get
     End Property
     Public Function GetData() As DataView
-        Dim SelectQry = "SELECT (ProductCode) as [Product Code],(ProductName) as [Product Name],(Weight) as [Weight],(ProductBy) as [Product Added By],(SupplierName) as [Supplier Name],(SupplierNo) as [Supplier Code],sum(Cartons) as [Cartons],Packets,Sum(TotalPackets) as [Total Packets] FROM stock where Cartons > 0 and TotalPackets > 0   group by ProductCode,ProductName,Weight,Packets order by ProductName "
+        Dim SelectQry = "SELECT (ProductCode) as [Product Code],(ProductName) as [Product Name],(Weight) as [Weight],(SupplierName) as [Supplier Name],sum(Cartons) as [Cartons],Packets,Sum(TotalPackets) as [Total Packets] FROM stock where Cartons > 0 and TotalPackets > 0   group by ProductCode,ProductName,Weight,SupplierName,Packets order by ProductName "
         Dim SampleSource As New DataSet
         Dim TableView As DataView
         Try
