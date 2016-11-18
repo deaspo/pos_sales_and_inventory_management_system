@@ -214,7 +214,7 @@ Public Class frmSuppliersRecord2
         Try
             con = New OleDbConnection(cs)
             con.Open()
-            cmd = New OleDbCommand("SELECT (supplierNo) as [Supplier ID],(SupplierName)as [Supplier Name] from Suppliers where SupplerName like '" & txtCustomer.Text & "%'  order by SupplierNo", con)
+            cmd = New OleDbCommand("SELECT (supplierNo) as [Supplier ID],(SupplierName)as [Supplier Name] from Suppliers where SupplierName like '" & txtCustomer.Text & "%'  order by SupplierNo", con)
 
 
 
@@ -238,7 +238,7 @@ Public Class frmSuppliersRecord2
         Try
             con = New OleDbConnection(cs)
             con.Open()
-            cmd = New OleDbCommand("SELECT (supplierNo) as [Supplier ID],(SupplierName)as [Supplier Name] from Suppliers where SupplerName like = '" & txtName.Text & "' order by SupplierNo", con)
+            cmd = New OleDbCommand("SELECT (supplierNo) as [Supplier ID],(SupplierName)as [Supplier Name] from Suppliers where SupplierName = '" & txtName.Text & "' order by SupplierNo", con)
 
 
 
