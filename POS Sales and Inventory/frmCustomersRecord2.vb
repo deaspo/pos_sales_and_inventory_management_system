@@ -18,7 +18,7 @@ Public Class frmCustomersRecord2
         End Get
     End Property
     Public Function GetData() As DataView
-        Dim SelectQry = "SELECT (customerNo) as [Customer ID],(B_name) as [ Customer Name],(b_address) as [Address],(b_city) as [City],(b_state) as [County],(b_zipcode) as [B_Zip/Post Code],(Phone) as [Phone],(email)as [Email],(mobileno) as [Mobile No],(notes)as [Notes] from Customer order by customerno"
+        Dim SelectQry = "SELECT (customerNo) as [Customer ID],(B_name) as [Customer Name],(b_address) as [Address],(b_city) as [City],(b_state) as [County],(b_zipcode) as [B_Zip/Post Code],(Phone) as [Phone],(email)as [Email],(mobileno) as [Mobile No],(notes)as [Notes] from Customer order by customerno"
 
         Dim SampleSource As New DataSet
         Dim TableView As DataView
