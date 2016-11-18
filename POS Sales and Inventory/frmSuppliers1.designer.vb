@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
-Partial Class frmSuppliersRecord1
+Partial Class frmSuppliersRecord2
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -243,13 +243,13 @@ Partial Class frmSuppliersRecord1
         Me.TabPage1.Text = "All Records"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'frmSuppliersRecord1
+        'frmSuppliersRecord2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(993, 470)
         Me.Controls.Add(Me.TabControl1)
-        Me.Name = "frmSuppliersRecord1"
+        Me.Name = "frmSuppliersRecord2"
         Me.Text = "Suppliers Records"
         Me.TabPage2.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)

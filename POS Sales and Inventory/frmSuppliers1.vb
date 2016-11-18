@@ -1,6 +1,6 @@
 ﻿Imports System.Data.OleDb
 Imports Excel = Microsoft.Office.Interop.Excel
-Public Class frmSuppliersRecord1
+Public Class frmSuppliersRecord2
     Dim rdr As OleDbDataReader = Nothing
     Dim dtable As DataTable
     Dim con As OleDbConnection = Nothing
