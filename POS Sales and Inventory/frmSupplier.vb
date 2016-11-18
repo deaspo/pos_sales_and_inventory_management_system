@@ -42,13 +42,6 @@ Public Class frmSupplier
             Exit Sub
         End If
 
-        If Len(Trim(txtSupplierNo.Text)) = 0 Then
-            MessageBox.Show("Please enter ID", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
-            txtSupplierNo.Focus()
-            Exit Sub
-        End If
-
-
         Try
             auto()
 

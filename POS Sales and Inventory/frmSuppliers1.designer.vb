@@ -250,7 +250,7 @@ Partial Class frmSuppliersRecord2
         Me.ClientSize = New System.Drawing.Size(993, 470)
         Me.Controls.Add(Me.TabControl1)
         Me.Name = "frmSuppliersRecord2"
-        Me.Text = "Suppliers Records"
+        Me.Text = "Suppliers"
         Me.TabPage2.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()

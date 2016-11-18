@@ -260,10 +260,10 @@
     <Compile Include="frmSuppliers1.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSuppliers.designer.vb">
-      <DependentUpon>frmSuppliers.vb</DependentUpon>
+    <Compile Include="frmSuppliers2.Designer.vb">
+      <DependentUpon>frmSuppliers2.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmSuppliers.vb">
+    <Compile Include="frmSuppliers2.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmSystemInfo.designer.vb">
@@ -394,8 +394,8 @@
     <EmbeddedResource Include="frmSuppliers1.resx">
       <DependentUpon>frmSuppliers1.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSuppliers.resx">
-      <DependentUpon>frmSuppliers.vb</DependentUpon>
+    <EmbeddedResource Include="frmSuppliers2.resx">
+      <DependentUpon>frmSuppliers2.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSystemInfo.resx">
       <DependentUpon>frmSystemInfo.vb</DependentUpon>

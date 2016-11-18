@@ -17,7 +17,7 @@ Public Class frmSuppliersRecord2
         End Get
     End Property
     Public Function GetData() As DataView
-        Dim SelectQry = "SELECT (supplierNo) as [Supplierr ID],(SupplierName)as [Supplier Name] from Suppliers order by SupplierNo"
+        Dim SelectQry = "SELECT (supplierNo) as [Supplierr ID],(SupplierName)as [Supplier Name],(AddedBy)as [Added BY] from Suppliers order by SupplierNo"
 
         Dim SampleSource As New DataSet
         Dim TableView As DataView
