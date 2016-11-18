@@ -43,4 +43,7 @@ Public Class frmMain
         frmCustomer.showdialog
     End Sub
 
+    Private Sub SupplierToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SupplierToolStripMenuItem1.Click
+        frmSupplier.ShowDialog()
+    End Sub
 End Class
