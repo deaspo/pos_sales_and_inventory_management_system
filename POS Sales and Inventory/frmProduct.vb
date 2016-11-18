@@ -142,7 +142,7 @@ Public Class frmProduct
                 con = New OleDbConnection(cs)
                 con.Open()
 
-                Dim cb As String = "insert into Product(productcode,productname,category,weight,price, addedby) VALUES (@d1,@d2,@d3,@d4,@d5,@d6,@d7,@d8)"
+                Dim cb As String = "insert into Product(productcode,productname,category,weight,price,supplierno,suppliername,addedby) VALUES (@d1,@d2,@d3,@d4,@d5,@d6,@d7,@d8)"
 
                 cmd = New OleDbCommand(cb)
 
@@ -158,10 +158,10 @@ Public Class frmProduct
 
                 cmd.Parameters.Add(New OleDbParameter("@d5", System.Data.OleDb.OleDbType.Double, 10, "price"))
 
-                cmd.Parameters.Add(New OleDbParameter("@d6", System.Data.OleDb.OleDbType.VarChar, 250, "addedby"))
+                cmd.Parameters.Add(New OleDbParameter("@d6", System.Data.OleDb.OleDbType.VarChar, 20, "supplierno"))
+                cmd.Parameters.Add(New OleDbParameter("@d7", System.Data.OleDb.OleDbType.VarChar, 250, "suppliername"))
 
-                cmd.Parameters.Add(New OleDbParameter("@d7", System.Data.OleDb.OleDbType.VarChar, 20, "supplierno"))
-                cmd.Parameters.Add(New OleDbParameter("@d8", System.Data.OleDb.OleDbType.VarChar, 250, "suppliername"))
+                cmd.Parameters.Add(New OleDbParameter("@d8", System.Data.OleDb.OleDbType.VarChar, 250, "addedby"))
 
 
 
@@ -175,12 +175,12 @@ Public Class frmProduct
 
                 cmd.Parameters("@d5").Value = CDbl(txtPrice.Text)
 
-                cmd.Parameters("@d6").Value = frmMain.tlName.Text
+                cmd.Parameters("@d8").Value = frmMain.tlName.Text
 
 
-                cmd.Parameters("@d7").Value = txtSupplierNo.Text
+                cmd.Parameters("@d6").Value = txtSupplierNo.Text
 
-                cmd.Parameters("@d8").Value = txtSupName.Text
+                cmd.Parameters("@d7").Value = txtSupName.Text
 
                 cmd.ExecuteReader()
                 MessageBox.Show("Successfully saved", "Product Details", MessageBoxButtons.OK, MessageBoxIcon.Information)
@@ -494,8 +494,6 @@ Public Class frmProduct
     End Sub
 
     Private Sub brnSuppNo_Click(sender As Object, e As EventArgs) Handles brnSuppNo.Click
-        Me.clear()
-
         frmSuppliers2.ShowDialog()
     End Sub
 End Class
