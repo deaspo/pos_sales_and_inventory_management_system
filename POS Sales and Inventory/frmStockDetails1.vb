@@ -162,7 +162,7 @@ Public Class frmStockDetails1
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (StockID)as [Stock ID],(StockDate)as [Entry Date],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight/Qty],(Cartons) as [Cartons],(Packets) as [Packets],(TotalPackets) as [Total Packets] from Stock where Productname = '" & cmbProductName.Text & "'order by ProductName", con)
+            cmd = New OleDbCommand("SELECT (StockID)as [Stock ID],(StockDate)as [Entry Date],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight/Qty],(SupplierName) as [Supplier Name],(SupplierNo) as [Supplier ID],(ProductBy) as [Product Added By],(Cartons) as [Cartons],(Packets) as [Packets],(TotalPackets) as [Total Packets] from Stock where Productname = '" & cmbProductName.Text & "'order by ProductName", con)
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
 
@@ -185,7 +185,7 @@ Public Class frmStockDetails1
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (StockID)as [Stock ID],(StockDate)as [Entry Date],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight/Qty],(Cartons) as [Cartons],(Packets) as [Packets],(TotalPackets) as [Total Packets] from Stock where Productname like '" & txtProduct.Text & "%' order by ProductName", con)
+            cmd = New OleDbCommand("SELECT (StockID)as [Stock ID],(StockDate)as [Entry Date],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight/Qty],(SupplierName) as [Supplier Name],(SupplierNo) as [Supplier ID],(ProductBy) as [Product Added By],(Cartons) as [Cartons],(Packets) as [Packets],(TotalPackets) as [Total Packets] from Stock where Productname like '" & txtProduct.Text & "%' order by ProductName", con)
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
 
@@ -308,7 +308,7 @@ Public Class frmStockDetails1
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (StockID)as [Stock ID],(StockDate)as [Entry Date],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight/Qty],(Cartons) as [Cartons],(Packets) as [Packets],(TotalPackets) as [Total Packets] from Stock where category = '" & cmbCategory.Text & "'order by Category", con)
+            cmd = New OleDbCommand("SELECT (StockID)as [Stock ID],(StockDate)as [Entry Date],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight/Qty],(SupplierName) as [Supplier Name],(SupplierNo) as [Supplier ID],(ProductBy) as [Product Added By],(Cartons) as [Cartons],(Packets) as [Packets],(TotalPackets) as [Total Packets] from Stock where category = '" & cmbCategory.Text & "'order by Category", con)
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
 
@@ -331,7 +331,7 @@ Public Class frmStockDetails1
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (StockID)as [Stock ID],(StockDate)as [Entry Date],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight/Qty],(Cartons) as [Cartons],(Packets) as [Packets],(TotalPackets) as [Total Packets] from Stock where Weight = '" & cmbWeight.Text & "'order by weight", con)
+            cmd = New OleDbCommand("SELECT (StockID)as [Stock ID],(StockDate)as [Entry Date],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight/Qty],(SupplierName) as [Supplier Name],(SupplierNo) as [Supplier ID],(ProductBy) as [Product Added By],(Cartons) as [Cartons],(Packets) as [Packets],(TotalPackets) as [Total Packets] from Stock where Weight = '" & cmbWeight.Text & "'order by weight", con)
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
 
@@ -361,9 +361,14 @@ Public Class frmStockDetails1
             frmStock.txtProductName.Text = dr.Cells(3).Value.ToString()
             frmStock.txtCategory.Text = dr.Cells(4).Value.ToString()
             frmStock.txtWeight.Text = dr.Cells(5).Value.ToString()
-            frmStock.txtCartons.Text = dr.Cells(6).Value.ToString()
-            frmStock.txtPackets.Text = dr.Cells(7).Value.ToString()
-            frmStock.txtTotalPackets.Text = dr.Cells(8).Value.ToString()
+
+            frmStock.txtSupName.Text = dr.Cells(6).Value.ToString()
+            frmStock.txtSupId.Text = dr.Cells(7).Value.ToString()
+            frmStock.txtAddedBy.Text = dr.Cells(8).Value.ToString()
+
+            frmStock.txtCartons.Text = dr.Cells(9).Value.ToString()
+            frmStock.txtPackets.Text = dr.Cells(10).Value.ToString()
+            frmStock.txtTotalPackets.Text = dr.Cells(11).Value.ToString()
             frmStock.Update_Record.Enabled = True
             frmStock.Delete.Enabled = True
             frmStock.Save.Enabled = False
@@ -386,9 +391,14 @@ Public Class frmStockDetails1
             frmStock.txtProductName.Text = dr.Cells(3).Value.ToString()
             frmStock.txtCategory.Text = dr.Cells(4).Value.ToString()
             frmStock.txtWeight.Text = dr.Cells(5).Value.ToString()
-            frmStock.txtCartons.Text = dr.Cells(6).Value.ToString()
-            frmStock.txtPackets.Text = dr.Cells(7).Value.ToString()
-            frmStock.txtTotalPackets.Text = dr.Cells(8).Value.ToString()
+
+            frmStock.txtSupName.Text = dr.Cells(6).Value.ToString()
+            frmStock.txtSupId.Text = dr.Cells(7).Value.ToString()
+            frmStock.txtAddedBy.Text = dr.Cells(8).Value.ToString()
+
+            frmStock.txtCartons.Text = dr.Cells(9).Value.ToString()
+            frmStock.txtPackets.Text = dr.Cells(10).Value.ToString()
+            frmStock.txtTotalPackets.Text = dr.Cells(11).Value.ToString()
             frmStock.Update_Record.Enabled = True
             frmStock.Delete.Enabled = True
             frmStock.Save.Enabled = False
@@ -411,9 +421,14 @@ Public Class frmStockDetails1
             frmStock.txtProductName.Text = dr.Cells(3).Value.ToString()
             frmStock.txtCategory.Text = dr.Cells(4).Value.ToString()
             frmStock.txtWeight.Text = dr.Cells(5).Value.ToString()
-            frmStock.txtCartons.Text = dr.Cells(6).Value.ToString()
-            frmStock.txtPackets.Text = dr.Cells(7).Value.ToString()
-            frmStock.txtTotalPackets.Text = dr.Cells(8).Value.ToString()
+
+            frmStock.txtSupName.Text = dr.Cells(6).Value.ToString()
+            frmStock.txtSupId.Text = dr.Cells(7).Value.ToString()
+            frmStock.txtAddedBy.Text = dr.Cells(8).Value.ToString()
+
+            frmStock.txtCartons.Text = dr.Cells(9).Value.ToString()
+            frmStock.txtPackets.Text = dr.Cells(10).Value.ToString()
+            frmStock.txtTotalPackets.Text = dr.Cells(11).Value.ToString()
             frmStock.Update_Record.Enabled = True
             frmStock.Delete.Enabled = True
             frmStock.Save.Enabled = False
@@ -431,7 +446,7 @@ Public Class frmStockDetails1
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (StockID)as [Stock ID],(StockDate)as [Entry Date],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight/Qty],(Cartons) as [Cartons],(Packets) as [Packets],(TotalPackets) as [Total Packets] from Stock where Cartons = 0 and TotalPackets=0 order by ProductName", con)
+            cmd = New OleDbCommand("SELECT (StockID)as [Stock ID],(StockDate)as [Entry Date],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight/Qty],(SupplierName) as [Supplier Name],(SupplierNo) as [Supplier ID],(ProductBy) as [Product Added By],(Cartons) as [Cartons],(Packets) as [Packets],(TotalPackets) as [Total Packets] from Stock where Cartons = 0 and TotalPackets=0 order by ProductName", con)
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
 
@@ -509,9 +524,14 @@ Public Class frmStockDetails1
             frmStock.txtProductName.Text = dr.Cells(3).Value.ToString()
             frmStock.txtCategory.Text = dr.Cells(4).Value.ToString()
             frmStock.txtWeight.Text = dr.Cells(5).Value.ToString()
-            frmStock.txtCartons.Text = dr.Cells(6).Value.ToString()
-            frmStock.txtPackets.Text = dr.Cells(7).Value.ToString()
-            frmStock.txtTotalPackets.Text = dr.Cells(8).Value.ToString()
+
+            frmStock.txtSupName.Text = dr.Cells(6).Value.ToString()
+            frmStock.txtSupId.Text = dr.Cells(7).Value.ToString()
+            frmStock.txtAddedBy.Text = dr.Cells(8).Value.ToString()
+
+            frmStock.txtCartons.Text = dr.Cells(9).Value.ToString()
+            frmStock.txtPackets.Text = dr.Cells(10).Value.ToString()
+            frmStock.txtTotalPackets.Text = dr.Cells(11).Value.ToString()
             frmStock.Update_Record.Enabled = True
             frmStock.Delete.Enabled = True
             frmStock.Save.Enabled = False
