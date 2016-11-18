@@ -17,7 +17,7 @@ Public Class frmProductsRecord
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight Per Qty],(Price) as [Price] from Product order by ProductName", con)
+            cmd = New OleDbCommand("SELECT (ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight Per Qty],(Price) as [Price],(SupplierName) as [Supplier Name],(SupplierNo) as [Supplier ID],(AddedBy) as [Added By] from Product order by ProductName", con)
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
 
@@ -325,7 +325,7 @@ Public Class frmProductsRecord
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight Per Qty],(Price) as [Price] from Product where ProductName= '" & cmbProductName.Text & "' order by Productname", con)
+            cmd = New OleDbCommand("SELECT (ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight Per Qty],(Price) as [Price],(SupplierName) as [Supplier Name],(SupplierNo) as [Supplier ID],(AddedBy) as [Added By] from Product where ProductName= '" & cmbProductName.Text & "' order by Productname", con)
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
 
@@ -348,7 +348,7 @@ Public Class frmProductsRecord
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight Per Qty],(Price) as [Price] from Product where ProductName like '" & txtProduct.Text & "%' order by ProductName", con)
+            cmd = New OleDbCommand("SELECT (ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight Per Qty],(Price) as [Price],(SupplierName) as [Supplier Name],(SupplierNo) as [Supplier ID],(AddedBy) as [Added By] from Product where ProductName like '" & txtProduct.Text & "%' order by ProductName", con)
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
 
@@ -371,7 +371,7 @@ Public Class frmProductsRecord
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight Per Qty],(Price) as [Price] from Product where Weight = '" & cmbWeight.Text & "' order by ProductName", con)
+            cmd = New OleDbCommand("SELECT (ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight Per Qty],(Price) as [Price],(SupplierName) as [Supplier Name],(SupplierNo) as [Supplier ID],(AddedBy) as [Added By] from Product where Weight = '" & cmbWeight.Text & "' order by ProductName", con)
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
 
@@ -394,7 +394,7 @@ Public Class frmProductsRecord
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight Per Qty],(Price) as [Price] from Product where Category = '" & cmbCategory.Text & "' order by ProductName", con)
+            cmd = New OleDbCommand("SELECT (ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight Per Qty],(Price) as [Price],(SupplierName) as [Supplier Name],(SupplierNo) as [Supplier ID],(AddedBy) as [Added By] from Product where Category = '" & cmbCategory.Text & "' order by ProductName", con)
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
 
