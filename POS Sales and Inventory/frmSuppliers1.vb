@@ -96,11 +96,11 @@ Public Class frmSuppliersRecord2
         Try
             Dim dr As DataGridViewRow = DataGridView2.SelectedRows(0)
             Me.Hide()
-            frmProduct.Show()
+            frmSupplier.Show()
             ' or simply use column name instead of index
             'dr.Cells["id"].Value.ToString();
-            frmProduct.txtSupplierNo.Text = dr.Cells(0).Value.ToString()
-            frmProduct.txtSupName.Text = dr.Cells(1).Value.ToString()
+            frmSupplier.txtSupplierNo.Text = dr.Cells(0).Value.ToString()
+            frmSupplier.txtSupplierName.Text = dr.Cells(1).Value.ToString()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
@@ -110,11 +110,11 @@ Public Class frmSuppliersRecord2
         Try
             Dim dr As DataGridViewRow = DataGridView1.SelectedRows(0)
             Me.Hide()
-            frmProduct.Show()
+            frmSupplier.Show()
             ' or simply use column name instead of index
             'dr.Cells["id"].Value.ToString();
-            frmProduct.txtSupplierNo.Text = dr.Cells(0).Value.ToString()
-            frmProduct.txtSupName.Text = dr.Cells(1).Value.ToString()
+            frmSupplier.txtSupplierNo.Text = dr.Cells(0).Value.ToString()
+            frmSupplier.txtSupplierName.Text = dr.Cells(1).Value.ToString()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
