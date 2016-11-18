@@ -17,7 +17,7 @@ Public Class frmProductsRecord2
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight Per Qty],(Price) as [Price],(AddedBy) as [Added By] from Product order by ProductName", con)
+            cmd = New OleDbCommand("SELECT (ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight Per Qty],(Price) as [Price],(SupplierName) as [Supplier Name],(SupplierNo) as [Supplier ID],(AddedBy) as [Added By] from Product order by ProductName", con)
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
 
@@ -425,6 +425,8 @@ Public Class frmProductsRecord2
             frmProduct.cmbCategory.Text = dr.Cells(2).Value.ToString()
             frmProduct.cmbWeight.Text = dr.Cells(3).Value.ToString()
             frmProduct.txtPrice.Text = dr.Cells(4).Value.ToString()
+            frmProduct.txtSupName.Text = dr.Cells(5).Value.ToString()
+            frmProduct.txtSupplierNo.Text = dr.Cells(6).Value.ToString()
             frmProduct.Update_Record.Enabled = True
             frmProduct.Delete.Enabled = True
             frmProduct.Save.Enabled = False
@@ -446,6 +448,8 @@ Public Class frmProductsRecord2
             frmProduct.cmbCategory.Text = dr.Cells(2).Value.ToString()
             frmProduct.cmbWeight.Text = dr.Cells(3).Value.ToString()
             frmProduct.txtPrice.Text = dr.Cells(4).Value.ToString()
+            frmProduct.txtSupName.Text = dr.Cells(5).Value.ToString()
+            frmProduct.txtSupplierNo.Text = dr.Cells(6).Value.ToString()
             frmProduct.Update_Record.Enabled = True
             frmProduct.Delete.Enabled = True
             frmProduct.Save.Enabled = False
@@ -467,6 +471,8 @@ Public Class frmProductsRecord2
             frmProduct.cmbCategory.Text = dr.Cells(2).Value.ToString()
             frmProduct.cmbWeight.Text = dr.Cells(3).Value.ToString()
             frmProduct.txtPrice.Text = dr.Cells(4).Value.ToString()
+            frmProduct.txtSupName.Text = dr.Cells(5).Value.ToString()
+            frmProduct.txtSupplierNo.Text = dr.Cells(6).Value.ToString()
             frmProduct.Update_Record.Enabled = True
             frmProduct.Delete.Enabled = True
             frmProduct.Save.Enabled = False
@@ -488,6 +494,8 @@ Public Class frmProductsRecord2
             frmProduct.cmbCategory.Text = dr.Cells(2).Value.ToString()
             frmProduct.cmbWeight.Text = dr.Cells(3).Value.ToString()
             frmProduct.txtPrice.Text = dr.Cells(4).Value.ToString()
+            frmProduct.txtSupName.Text = dr.Cells(5).Value.ToString()
+            frmProduct.txtSupplierNo.Text = dr.Cells(6).Value.ToString()
             frmProduct.Update_Record.Enabled = True
             frmProduct.Delete.Enabled = True
             frmProduct.Save.Enabled = False
