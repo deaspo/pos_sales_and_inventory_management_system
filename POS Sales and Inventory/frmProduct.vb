@@ -18,6 +18,8 @@ Public Class frmProduct
         txtProductName.Text = ""
         cmbCategory.Text = ""
         cmbWeight.Text = ""
+        txtSupName.Text = ""
+        txtSupplierNo.Text = ""
 
     End Sub
     Public Shared Function GetUniqueKey(ByVal maxSize As Integer) As String
@@ -494,6 +496,6 @@ Public Class frmProduct
     Private Sub brnSuppNo_Click(sender As Object, e As EventArgs) Handles brnSuppNo.Click
         Me.clear()
 
-        'frmSuppliers.ShowDialog()
+        frmSuppliers2.ShowDialog()
     End Sub
 End Class

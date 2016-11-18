@@ -32,7 +32,6 @@ Public Class frmSupplier
         txtSupplierName.Clear()
         txtSupplierNo.Clear()
 
-        frmSuppliersRecord1.ShowDialog()
     End Sub
 
     Private Sub Save_Click(sender As Object, e As EventArgs) Handles Save.Click
