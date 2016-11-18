@@ -56,6 +56,12 @@ Partial Class frmStock
         Me.Save = New System.Windows.Forms.Button()
         Me.NewRecord = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.txtSupId = New System.Windows.Forms.TextBox()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.txtAddedBy = New System.Windows.Forms.TextBox()
+        Me.txtSupName = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
@@ -63,6 +69,12 @@ Partial Class frmStock
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.txtSupName)
+        Me.GroupBox1.Controls.Add(Me.txtAddedBy)
+        Me.GroupBox1.Controls.Add(Me.txtSupId)
+        Me.GroupBox1.Controls.Add(Me.Label12)
+        Me.GroupBox1.Controls.Add(Me.Label13)
+        Me.GroupBox1.Controls.Add(Me.Label14)
         Me.GroupBox1.Controls.Add(Me.txtCategory)
         Me.GroupBox1.Controls.Add(Me.Label10)
         Me.GroupBox1.Controls.Add(Me.Button1)
@@ -86,7 +98,7 @@ Partial Class frmStock
         Me.GroupBox1.Font = New System.Drawing.Font("Palatino Linotype", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(34, 58)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(516, 346)
+        Me.GroupBox1.Size = New System.Drawing.Size(516, 477)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Stock Details"
@@ -154,7 +166,7 @@ Partial Class frmStock
         '
         'txtPackets
         '
-        Me.txtPackets.Location = New System.Drawing.Point(165, 259)
+        Me.txtPackets.Location = New System.Drawing.Point(165, 406)
         Me.txtPackets.Name = "txtPackets"
         Me.txtPackets.Size = New System.Drawing.Size(91, 24)
         Me.txtPackets.TabIndex = 7
@@ -169,7 +181,7 @@ Partial Class frmStock
         '
         'txtTotalPackets
         '
-        Me.txtTotalPackets.Location = New System.Drawing.Point(165, 297)
+        Me.txtTotalPackets.Location = New System.Drawing.Point(165, 444)
         Me.txtTotalPackets.Name = "txtTotalPackets"
         Me.txtTotalPackets.ReadOnly = True
         Me.txtTotalPackets.Size = New System.Drawing.Size(91, 24)
@@ -177,7 +189,7 @@ Partial Class frmStock
         '
         'txtCartons
         '
-        Me.txtCartons.Location = New System.Drawing.Point(165, 220)
+        Me.txtCartons.Location = New System.Drawing.Point(165, 367)
         Me.txtCartons.Name = "txtCartons"
         Me.txtCartons.Size = New System.Drawing.Size(91, 24)
         Me.txtCartons.TabIndex = 6
@@ -185,7 +197,7 @@ Partial Class frmStock
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(32, 259)
+        Me.Label5.Location = New System.Drawing.Point(32, 406)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(120, 17)
         Me.Label5.TabIndex = 12
@@ -219,7 +231,7 @@ Partial Class frmStock
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(32, 300)
+        Me.Label8.Location = New System.Drawing.Point(32, 447)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(81, 17)
         Me.Label8.TabIndex = 10
@@ -228,7 +240,7 @@ Partial Class frmStock
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(32, 220)
+        Me.Label6.Location = New System.Drawing.Point(32, 367)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(51, 17)
         Me.Label6.TabIndex = 6
@@ -379,6 +391,57 @@ Partial Class frmStock
         Me.Button3.Text = "&c"
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'txtSupId
+        '
+        Me.txtSupId.Location = New System.Drawing.Point(165, 306)
+        Me.txtSupId.Name = "txtSupId"
+        Me.txtSupId.ReadOnly = True
+        Me.txtSupId.Size = New System.Drawing.Size(91, 24)
+        Me.txtSupId.TabIndex = 28
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(32, 268)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(89, 17)
+        Me.Label12.TabIndex = 30
+        Me.Label12.Text = "Supplier Name"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Location = New System.Drawing.Point(32, 309)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(71, 17)
+        Me.Label13.TabIndex = 29
+        Me.Label13.Text = "Supplier ID"
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Location = New System.Drawing.Point(32, 229)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(107, 17)
+        Me.Label14.TabIndex = 26
+        Me.Label14.Text = "Product Added by"
+        '
+        'txtAddedBy
+        '
+        Me.txtAddedBy.Location = New System.Drawing.Point(165, 226)
+        Me.txtAddedBy.Name = "txtAddedBy"
+        Me.txtAddedBy.ReadOnly = True
+        Me.txtAddedBy.Size = New System.Drawing.Size(91, 24)
+        Me.txtAddedBy.TabIndex = 31
+        '
+        'txtSupName
+        '
+        Me.txtSupName.Location = New System.Drawing.Point(165, 268)
+        Me.txtSupName.Name = "txtSupName"
+        Me.txtSupName.ReadOnly = True
+        Me.txtSupName.Size = New System.Drawing.Size(91, 24)
+        Me.txtSupName.TabIndex = 32
+        '
         'frmStock
         '
         Me.AcceptButton = Me.Save
@@ -437,4 +500,10 @@ Partial Class frmStock
     Friend WithEvents txtCategory As System.Windows.Forms.TextBox
     Friend WithEvents Label10 As System.Windows.Forms.Label
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents txtSupName As TextBox
+    Friend WithEvents txtAddedBy As TextBox
+    Friend WithEvents txtSupId As TextBox
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label14 As Label
 End Class
