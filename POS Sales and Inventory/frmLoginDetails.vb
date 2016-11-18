@@ -40,7 +40,7 @@
         btnLogin_Click(sender, e)
     End Sub
 
-    Private Sub FillByToolStripButton_Click(sender As Object, e As EventArgs) Handles FillByToolStripButton.Click
+    Private Sub FillByToolStripButton_Click(sender As Object, e As EventArgs) 
         Try
             Me.EmployeesTableAdapter2.FillBy(Me.Product_inventoryDataSet1.Employees)
         Catch ex As System.Exception

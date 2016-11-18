@@ -37,12 +37,10 @@ Partial Class frmLoginDetails
         Me.btnLogin = New System.Windows.Forms.Button()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.EmployeesTableAdapter2 = New POS_Sales_and_Inventory.product_inventoryDataSetTableAdapters.EmployeesTableAdapter()
-        Me.FillByToolStrip = New System.Windows.Forms.ToolStrip()
-        Me.FillByToolStripButton = New System.Windows.Forms.ToolStripButton()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.dgLoginDetails, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.EmployeesBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Product_inventoryDataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.FillByToolStrip.SuspendLayout()
         Me.SuspendLayout()
         '
         'dgLoginDetails
@@ -60,7 +58,7 @@ Partial Class frmLoginDetails
         Me.dgLoginDetails.DataSource = Me.EmployeesBindingSource1
         Me.dgLoginDetails.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
         Me.dgLoginDetails.GridColor = System.Drawing.SystemColors.HotTrack
-        Me.dgLoginDetails.Location = New System.Drawing.Point(0, 137)
+        Me.dgLoginDetails.Location = New System.Drawing.Point(12, 178)
         Me.dgLoginDetails.MultiSelect = False
         Me.dgLoginDetails.Name = "dgLoginDetails"
         Me.dgLoginDetails.ReadOnly = True
@@ -130,7 +128,7 @@ Partial Class frmLoginDetails
         Me.Label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaption
-        Me.Label3.Location = New System.Drawing.Point(0, 100)
+        Me.Label3.Location = New System.Drawing.Point(12, 141)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(290, 27)
         Me.Label3.TabIndex = 10
@@ -139,7 +137,7 @@ Partial Class frmLoginDetails
         '
         'btnNewEmployee
         '
-        Me.btnNewEmployee.Location = New System.Drawing.Point(0, 370)
+        Me.btnNewEmployee.Location = New System.Drawing.Point(12, 411)
         Me.btnNewEmployee.Name = "btnNewEmployee"
         Me.btnNewEmployee.Size = New System.Drawing.Size(217, 28)
         Me.btnNewEmployee.TabIndex = 11
@@ -148,7 +146,7 @@ Partial Class frmLoginDetails
         '
         'btnLogin
         '
-        Me.btnLogin.Location = New System.Drawing.Point(462, 370)
+        Me.btnLogin.Location = New System.Drawing.Point(474, 411)
         Me.btnLogin.Name = "btnLogin"
         Me.btnLogin.Size = New System.Drawing.Size(257, 28)
         Me.btnLogin.TabIndex = 12
@@ -157,7 +155,7 @@ Partial Class frmLoginDetails
         '
         'btnExit
         '
-        Me.btnExit.Location = New System.Drawing.Point(308, 370)
+        Me.btnExit.Location = New System.Drawing.Point(320, 411)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(75, 28)
         Me.btnExit.TabIndex = 13
@@ -168,30 +166,26 @@ Partial Class frmLoginDetails
         '
         Me.EmployeesTableAdapter2.ClearBeforeFill = True
         '
-        'FillByToolStrip
+        'Label4
         '
-        Me.FillByToolStrip.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FillByToolStripButton})
-        Me.FillByToolStrip.Location = New System.Drawing.Point(0, 0)
-        Me.FillByToolStrip.Name = "FillByToolStrip"
-        Me.FillByToolStrip.Size = New System.Drawing.Size(739, 25)
-        Me.FillByToolStrip.TabIndex = 14
-        Me.FillByToolStrip.Text = "FillByToolStrip"
-        '
-        'FillByToolStripButton
-        '
-        Me.FillByToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.FillByToolStripButton.Name = "FillByToolStripButton"
-        Me.FillByToolStripButton.Size = New System.Drawing.Size(39, 22)
-        Me.FillByToolStripButton.Text = "FillBy"
+        Me.Label4.AutoSize = True
+        Me.Label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 21.75!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(276, 106)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(93, 35)
+        Me.Label4.TabIndex = 14
+        Me.Label4.Text = "Login"
+        Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'frmLoginDetails
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = CType(resources.GetObject("$this.BackgroundImage"), System.Drawing.Image)
-        Me.ClientSize = New System.Drawing.Size(739, 418)
+        Me.ClientSize = New System.Drawing.Size(739, 447)
         Me.ControlBox = False
-        Me.Controls.Add(Me.FillByToolStrip)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnLogin)
         Me.Controls.Add(Me.btnNewEmployee)
@@ -206,8 +200,6 @@ Partial Class frmLoginDetails
         CType(Me.dgLoginDetails, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.EmployeesBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Product_inventoryDataSet1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.FillByToolStrip.ResumeLayout(False)
-        Me.FillByToolStrip.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -236,6 +228,5 @@ Partial Class frmLoginDetails
     Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
     Friend WithEvents PasswordDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents FillByToolStrip As ToolStrip
-    Friend WithEvents FillByToolStripButton As ToolStripButton
+    Friend WithEvents Label4 As Label
 End Class
