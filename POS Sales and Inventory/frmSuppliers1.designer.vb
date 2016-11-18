@@ -97,7 +97,7 @@ Partial Class frmSuppliersRecord2
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(125, 18)
         Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Search Distributors"
+        Me.Label1.Text = "Search Customers"
         '
         'label6
         '

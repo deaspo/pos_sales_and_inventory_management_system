@@ -22,8 +22,8 @@ Public Class frmOrders
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (OrderNo) as [Order No],(OrderDate) as [Order Date],(OrderStatus) as [Order Status],(CustomerNo) as [Distributor ID],(CustomerName) as [Customer Name],(TotalAmount)as [Total Amount] from Orderinfo where OrderStatus='Uncompleted' and OrderDate between #" & DateTimePicker2.Value & "# And #" & DateTimePicker1.Value & "# order by orderinfo.OrderNo,OrderDate", con)
-           
+            cmd = New OleDbCommand("SELECT (OrderNo) as [Order No],(OrderDate) as [Order Date],(OrderStatus) as [Order Status],(CustomerNo) as [Customer ID],(CustomerName) as [Customer Name],(TotalAmount)as [Total Amount] from Orderinfo where OrderStatus='Uncompleted' and OrderDate between #" & DateTimePicker2.Value & "# And #" & DateTimePicker1.Value & "# order by orderinfo.OrderNo,OrderDate", con)
+
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
 
             Dim myDataSet As DataSet = New DataSet()

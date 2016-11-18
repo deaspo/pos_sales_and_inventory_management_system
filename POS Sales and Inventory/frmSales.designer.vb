@@ -339,7 +339,7 @@ Partial Class frmSales
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(104, 17)
         Me.Label2.TabIndex = 64
-        Me.Label2.Text = "Distributor Name"
+        Me.Label2.Text = "Customer Name"
         '
         'Label1
         '
@@ -349,7 +349,7 @@ Partial Class frmSales
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(86, 17)
         Me.Label1.TabIndex = 63
-        Me.Label1.Text = "Distributor ID"
+        Me.Label1.Text = "Customer ID"
         '
         'Label13
         '

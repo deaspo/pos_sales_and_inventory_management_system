@@ -55,8 +55,8 @@ Partial Class frmCustomersRecord2
         'TabControl1
         '
         Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
@@ -80,8 +80,8 @@ Partial Class frmCustomersRecord2
         'DataGridView1
         '
         Me.DataGridView1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(8, 99)
         Me.DataGridView1.MultiSelect = False
@@ -141,7 +141,7 @@ Partial Class frmCustomersRecord2
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(1063, 639)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "By Distributor Name"
+        Me.TabPage2.Text = "By Customer Name"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'GroupBox3
@@ -169,13 +169,13 @@ Partial Class frmCustomersRecord2
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(125, 18)
         Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Search Distributors"
+        Me.Label1.Text = "Search Customers"
         '
         'DataGridView2
         '
         Me.DataGridView2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView2.Location = New System.Drawing.Point(8, 96)
         Me.DataGridView2.MultiSelect = False
@@ -231,7 +231,7 @@ Partial Class frmCustomersRecord2
         Me.label6.Name = "label6"
         Me.label6.Size = New System.Drawing.Size(115, 18)
         Me.label6.TabIndex = 6
-        Me.label6.Text = "Distributor Name"
+        Me.label6.Text = "Customer Name"
         '
         'txtName
         '
@@ -257,7 +257,7 @@ Partial Class frmCustomersRecord2
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "frmCustomersRecord2"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Super Distributor Record"
+        Me.Text = "Customers Record"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

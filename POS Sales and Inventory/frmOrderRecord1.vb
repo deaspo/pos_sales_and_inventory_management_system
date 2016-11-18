@@ -18,7 +18,7 @@ Public Class frmOrderRecord1
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (OrderInfo.OrderNo)as [Order No],(OrderDate)as [Order Date],(OrderStatus) as [Order Status],(CustomerNo) as [Distributor ID],(CustomerName) as [Distributor Name],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Weight) as [Weight],(Price) as [Price],(Cartons) as [Cartons],(TotalPackets) as [Total Packets],(OrderedProduct.TotalAmount) as [Total Amount] from orderinfo,orderedproduct where orderinfo.orderno=orderedproduct.orderno and OrderDate between #" & dtpOrderDateFrom.Value & "# And #" & dtpOrderDateTo.Value & "# order by orderinfo.OrderNo,OrderDate", con)
+            cmd = New OleDbCommand("SELECT (OrderInfo.OrderNo)as [Order No],(OrderDate)as [Order Date],(OrderStatus) as [Order Status],(CustomerNo) as [Customer ID],(CustomerName) as [Customer Name],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Weight) as [Weight],(Price) as [Price],(Cartons) as [Cartons],(TotalPackets) as [Total Packets],(OrderedProduct.TotalAmount) as [Total Amount] from orderinfo,orderedproduct where orderinfo.orderno=orderedproduct.orderno and OrderDate between #" & dtpOrderDateFrom.Value & "# And #" & dtpOrderDateTo.Value & "# order by orderinfo.OrderNo,OrderDate", con)
 
 
 
@@ -146,7 +146,7 @@ Public Class frmOrderRecord1
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (OrderInfo.OrderNo)as [Order No],(OrderDate)as [Order Date],(OrderStatus) as [Order Status],(CustomerNo) as [Distributor ID],(CustomerName) as [Distributor Name],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Weight) as [Weight],(Price) as [Price],(Cartons) as [Cartons],(TotalPackets) as [Total Packets],(OrderedProduct.TotalAmount) as [Total Amount] from orderinfo,orderedproduct where orderinfo.orderno=orderedproduct.orderno and orderstatus = '" & cmbStatus.Text & "' order by orderinfo.OrderNo,OrderDate", con)
+            cmd = New OleDbCommand("SELECT (OrderInfo.OrderNo)as [Order No],(OrderDate)as [Order Date],(OrderStatus) as [Order Status],(CustomerNo) as [Customer ID],(CustomerName) as [Customer Name],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Weight) as [Weight],(Price) as [Price],(Cartons) as [Cartons],(TotalPackets) as [Total Packets],(OrderedProduct.TotalAmount) as [Total Amount] from orderinfo,orderedproduct where orderinfo.orderno=orderedproduct.orderno and orderstatus = '" & cmbStatus.Text & "' order by orderinfo.OrderNo,OrderDate", con)
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
 
@@ -527,7 +527,7 @@ Public Class frmOrderRecord1
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (OrderInfo.OrderNo)as [Order No],(OrderDate)as [Order Date],(OrderStatus) as [Order Status],(CustomerNo) as [Distributor ID],(CustomerName) as [Distributor Name],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Weight) as [Weight],(Price) as [Price],(Cartons) as [Cartons],(TotalPackets) as [Total Packets],(OrderedProduct.TotalAmount) as [Total Amount] from orderinfo,orderedproduct where orderinfo.orderno=orderedproduct.orderno and CustomerName like '" & txtCustomer.Text & "%' order by orderinfo.OrderNo,OrderDate", con)
+            cmd = New OleDbCommand("SELECT (OrderInfo.OrderNo)as [Order No],(OrderDate)as [Order Date],(OrderStatus) as [Order Status],(CustomerNo) as [Customer ID],(CustomerName) as [Customer Name],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Weight) as [Weight],(Price) as [Price],(Cartons) as [Cartons],(TotalPackets) as [Total Packets],(OrderedProduct.TotalAmount) as [Total Amount] from orderinfo,orderedproduct where orderinfo.orderno=orderedproduct.orderno and CustomerName like '" & txtCustomer.Text & "%' order by orderinfo.OrderNo,OrderDate", con)
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
 
@@ -551,7 +551,7 @@ Public Class frmOrderRecord1
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (OrderInfo.OrderNo)as [Order No],(OrderDate)as [Order Date],(OrderStatus) as [Order Status],(CustomerNo) as [Distributor ID],(CustomerName) as [Distributor Name],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Weight) as [Weight],(Price) as [Price],(Cartons) as [Cartons],(TotalPackets) as [Total Packets],(OrderedProduct.TotalAmount) as [Total Amount] from orderinfo,orderedproduct where orderinfo.orderno=orderedproduct.orderno and ProductName like '" & txtProduct.Text & "%' order by orderinfo.OrderNo,OrderDate", con)
+            cmd = New OleDbCommand("SELECT (OrderInfo.OrderNo)as [Order No],(OrderDate)as [Order Date],(OrderStatus) as [Order Status],(CustomerNo) as [Customer ID],(CustomerName) as [Customer Name],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Weight) as [Weight],(Price) as [Price],(Cartons) as [Cartons],(TotalPackets) as [Total Packets],(OrderedProduct.TotalAmount) as [Total Amount] from orderinfo,orderedproduct where orderinfo.orderno=orderedproduct.orderno and ProductName like '" & txtProduct.Text & "%' order by orderinfo.OrderNo,OrderDate", con)
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
 
@@ -574,7 +574,7 @@ Public Class frmOrderRecord1
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (OrderInfo.OrderNo)as [Order No],(OrderDate)as [Order Date],(OrderStatus) as [Order Status],(CustomerNo) as [Distributor ID],(CustomerName) as [Distributor Name],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Weight) as [Weight],(Price) as [Price],(Cartons) as [Cartons],(TotalPackets) as [Total Packets],(OrderedProduct.TotalAmount) as [Total Amount] from orderinfo,orderedproduct where orderinfo.orderno=orderedproduct.orderno and ProductName = '" & cmbProductName.Text & "' order by orderinfo.OrderNo,OrderDate", con)
+            cmd = New OleDbCommand("SELECT (OrderInfo.OrderNo)as [Order No],(OrderDate)as [Order Date],(OrderStatus) as [Order Status],(CustomerNo) as [Customer ID],(CustomerName) as [Customer Name],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Weight) as [Weight],(Price) as [Price],(Cartons) as [Cartons],(TotalPackets) as [Total Packets],(OrderedProduct.TotalAmount) as [Total Amount] from orderinfo,orderedproduct where orderinfo.orderno=orderedproduct.orderno and ProductName = '" & cmbProductName.Text & "' order by orderinfo.OrderNo,OrderDate", con)
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
 
@@ -597,7 +597,7 @@ Public Class frmOrderRecord1
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (OrderInfo.OrderNo)as [Order No],(OrderDate)as [Order Date],(OrderStatus) as [Order Status],(CustomerNo) as [Distributor ID],(CustomerName) as [Distributor Name],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Weight) as [Weight],(Price) as [Price],(Cartons) as [Cartons],(TotalPackets) as [Total Packets],(OrderedProduct.TotalAmount) as [Total Amount]  from orderinfo,orderedproduct where orderinfo.orderno=orderedproduct.orderno and CustomerName = '" & cmbCustomerName.Text & "' order by orderinfo.OrderNo,OrderDate", con)
+            cmd = New OleDbCommand("SELECT (OrderInfo.OrderNo)as [Order No],(OrderDate)as [Order Date],(OrderStatus) as [Order Status],(CustomerNo) as [Customer ID],(CustomerName) as [Customer Name],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Weight) as [Weight],(Price) as [Price],(Cartons) as [Cartons],(TotalPackets) as [Total Packets],(OrderedProduct.TotalAmount) as [Total Amount]  from orderinfo,orderedproduct where orderinfo.orderno=orderedproduct.orderno and CustomerName = '" & cmbCustomerName.Text & "' order by orderinfo.OrderNo,OrderDate", con)
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
 
@@ -620,7 +620,7 @@ Public Class frmOrderRecord1
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (OrderInfo.OrderNo)as [Order No],(OrderDate)as [Order Date],(OrderStatus) as [Order Status],(CustomerNo) as [Distributor ID],(CustomerName) as [Distributor Name],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Weight) as [Weight],(Price) as [Price],(Cartons) as [Cartons],(TotalPackets) as [Total Packets],(OrderedProduct.TotalAmount) as [Total Amount] from orderinfo,orderedproduct where orderinfo.orderno=orderedproduct.orderno and orderinfo.Orderno = '" & cmbOrderNo.Text & "' order by orderinfo.OrderNo,OrderDate", con)
+            cmd = New OleDbCommand("SELECT (OrderInfo.OrderNo)as [Order No],(OrderDate)as [Order Date],(OrderStatus) as [Order Status],(CustomerNo) as [Customer ID],(CustomerName) as [Customer Name],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Weight) as [Weight],(Price) as [Price],(Cartons) as [Cartons],(TotalPackets) as [Total Packets],(OrderedProduct.TotalAmount) as [Total Amount] from orderinfo,orderedproduct where orderinfo.orderno=orderedproduct.orderno and orderinfo.Orderno = '" & cmbOrderNo.Text & "' order by orderinfo.OrderNo,OrderDate", con)
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
 

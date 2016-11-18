@@ -141,7 +141,7 @@ Partial Class frmCustomersRecord3
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage2.Size = New System.Drawing.Size(1063, 639)
         Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "By Distributor Name"
+        Me.TabPage2.Text = "By Customer Name"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
         'GroupBox3
@@ -169,7 +169,7 @@ Partial Class frmCustomersRecord3
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(124, 18)
         Me.Label1.TabIndex = 6
-        Me.Label1.Text = "Search Distributors"
+        Me.Label1.Text = "Search Customers"
         '
         'DataGridView2
         '
@@ -231,7 +231,7 @@ Partial Class frmCustomersRecord3
         Me.label6.Name = "label6"
         Me.label6.Size = New System.Drawing.Size(114, 18)
         Me.label6.TabIndex = 6
-        Me.label6.Text = "Distributor Name"
+        Me.label6.Text = "Customer Name"
         '
         'txtName
         '
@@ -257,7 +257,7 @@ Partial Class frmCustomersRecord3
         Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Name = "frmCustomersRecord1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Super Distributor Record"
+        Me.Text = "Super Customer Record"
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

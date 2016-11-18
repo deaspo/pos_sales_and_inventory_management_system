@@ -528,7 +528,7 @@ Partial Class frmOrderRecord1
         Me.TabPage6.Padding = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.TabPage6.Size = New System.Drawing.Size(1258, 649)
         Me.TabPage6.TabIndex = 5
-        Me.TabPage6.Text = "By Distributor"
+        Me.TabPage6.Text = "By Customer"
         Me.TabPage6.UseVisualStyleBackColor = True
         '
         'GroupBox7
@@ -556,7 +556,7 @@ Partial Class frmOrderRecord1
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(125, 18)
         Me.Label5.TabIndex = 6
-        Me.Label5.Text = "Search Distributors"
+        Me.Label5.Text = "Search Customers"
         '
         'DataGridView6
         '
@@ -625,7 +625,7 @@ Partial Class frmOrderRecord1
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(135, 21)
         Me.Label16.TabIndex = 9
-        Me.Label16.Text = "Distributor Name"
+        Me.Label16.Text = "Customer Name"
         '
         'frmOrderRecord1
         '

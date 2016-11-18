@@ -24,7 +24,7 @@ Public Class frmSalesRecord1
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (invoiceNo) as [Invoice No],(BillingDate) as [Invoice Date],(CustomerNo) as [Distributor ID],(CustomerName) as [Distributor Name],(GrandTotal) as [Grand Total],(TotalPayment) as [Total Payment],(PaymentDue) as [Payment Due] from billinfo where BillingDate between #" & dtpInvoiceDateFrom.Value & "# And #" & dtpInvoiceDateTo.Value & "# order by BillingDate", con)
+            cmd = New OleDbCommand("SELECT (invoiceNo) as [Invoice No],(BillingDate) as [Invoice Date],(CustomerNo) as [Customer ID],(CustomerName) as [Customer Name],(GrandTotal) as [Grand Total],(TotalPayment) as [Total Payment],(PaymentDue) as [Payment Due] from billinfo where BillingDate between #" & dtpInvoiceDateFrom.Value & "# And #" & dtpInvoiceDateTo.Value & "# order by BillingDate", con)
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
 
@@ -349,7 +349,7 @@ Public Class frmSalesRecord1
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (invoiceNo) as [Invoice No],(BillingDate) as [Invoice Date],(CustomerNo) as [Distributor ID],(CustomerName) as [Distributor Name],(GrandTotal) as [Grand Total],(TotalPayment) as [Total Payment],(PaymentDue) as [Payment Due] from billinfo where customername= '" & cmbCustomerName.Text & "' order by BillingDate", con)
+            cmd = New OleDbCommand("SELECT (invoiceNo) as [Invoice No],(BillingDate) as [Invoice Date],(CustomerNo) as [Customer ID],(CustomerName) as [Customer Name],(GrandTotal) as [Grand Total],(TotalPayment) as [Total Payment],(PaymentDue) as [Payment Due] from billinfo where customername= '" & cmbCustomerName.Text & "' order by BillingDate", con)
 
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
@@ -386,7 +386,7 @@ Public Class frmSalesRecord1
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand(" select (invoiceNo) as [Invoice No],(BillingDate) as [Invoice Date],(CustomerNo) as [Distributor ID],(CustomerName) as [Distributor Name],(GrandTotal) as [Grand Total],(TotalPayment) as [Total Payment],(PaymentDue) as [Payment Due] from billinfo where invoiceno = '" & cmbInvoiceNo.Text & "' order by BillingDate", con)
+            cmd = New OleDbCommand(" select (invoiceNo) as [Invoice No],(BillingDate) as [Invoice Date],(CustomerNo) as [Customer ID],(CustomerName) as [Customer Name],(GrandTotal) as [Grand Total],(TotalPayment) as [Total Payment],(PaymentDue) as [Payment Due] from billinfo where invoiceno = '" & cmbInvoiceNo.Text & "' order by BillingDate", con)
 
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
@@ -429,7 +429,7 @@ Public Class frmSalesRecord1
             con = New OleDbConnection(cs)
 
             con.Open()
-            cmd = New OleDbCommand("SELECT (invoiceNo) as [Invoice No],(BillingDate) as [Invoice Date],(CustomerNo) as [Distributor ID],(CustomerName) as [Distributor Name],(GrandTotal) as [Grand Total],(TotalPayment) as [Total Payment],(PaymentDue) as [Payment Due] from billinfo where BillingDate between #" & DateTimePicker2.Value & "# And #" & DateTimePicker1.Value & "# and PaymentDue > 0 order by BillingDate", con)
+            cmd = New OleDbCommand("SELECT (invoiceNo) as [Invoice No],(BillingDate) as [Invoice Date],(CustomerNo) as [Customer ID],(CustomerName) as [Customer Name],(GrandTotal) as [Grand Total],(TotalPayment) as [Total Payment],(PaymentDue) as [Payment Due] from billinfo where BillingDate between #" & DateTimePicker2.Value & "# And #" & DateTimePicker1.Value & "# and PaymentDue > 0 order by BillingDate", con)
 
             Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
 

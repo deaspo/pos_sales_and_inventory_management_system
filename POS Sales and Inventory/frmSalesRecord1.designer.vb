@@ -317,7 +317,7 @@ Partial Class frmSalesRecord1
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
         Me.TabPage3.Size = New System.Drawing.Size(1027, 635)
         Me.TabPage3.TabIndex = 2
-        Me.TabPage3.Text = "By Distributor"
+        Me.TabPage3.Text = "By Customer"
         Me.TabPage3.UseVisualStyleBackColor = True
         '
         'GroupBox4
@@ -454,7 +454,7 @@ Partial Class frmSalesRecord1
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(135, 21)
         Me.Label16.TabIndex = 9
-        Me.Label16.Text = "Distributor Name"
+        Me.Label16.Text = "Customer Name"
         '
         'TabPage4
         '

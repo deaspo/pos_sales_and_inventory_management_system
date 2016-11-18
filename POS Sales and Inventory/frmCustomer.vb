@@ -73,7 +73,7 @@ Public Class frmCustomer
             rdr = cmd.ExecuteReader()
 
             If rdr.Read Then
-                MessageBox.Show("Distributor ID Already Exists", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                MessageBox.Show("Customer ID Already Exists", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
 
                 If Not rdr Is Nothing Then
                     rdr.Close()
@@ -336,7 +336,7 @@ Public Class frmCustomer
     End Sub
     Private Sub Delete_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Delete.Click
         Try
-            If MessageBox.Show("Do you really want to delete the record?", "Distributor Record", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
+            If MessageBox.Show("Do you really want to delete the record?", "Customer Record", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) = DialogResult.Yes Then
                 delete_records()
             End If
 

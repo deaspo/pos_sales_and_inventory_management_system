@@ -66,12 +66,12 @@ Public Class frmSales
     Private Sub Save_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Save.Click
 
         If Len(Trim(txtCustomerNo.Text)) = 0 Then
-            MessageBox.Show("Select Distributor id", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Select Customer id", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             txtCustomerNo.Focus()
             Exit Sub
         End If
         If Len(Trim(txtCustomerName.Text)) = 0 Then
-            MessageBox.Show("Select Distributor name", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            MessageBox.Show("Select Customer name", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             Button1.Focus()
             Exit Sub
         End If
