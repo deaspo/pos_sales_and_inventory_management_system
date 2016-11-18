@@ -104,13 +104,17 @@ Public Class frmCustomersRecord3
             frmCustomer.B_name.Text = dr.Cells(1).Value.ToString()
 
             frmCustomer.B_Address.Text = dr.Cells(2).Value.ToString()
-            frmCustomer.B_City.Text = dr.Cells(4).Value.ToString()
-            frmCustomer.B_State.Text = dr.Cells(5).Value.ToString()
-            frmCustomer.B_ZipCode.Text = dr.Cells(6).Value.ToString()
-            frmCustomer.txtPhone.Text = dr.Cells(13).Value.ToString()
-            frmCustomer.txtEmail.Text = dr.Cells(14).Value.ToString()
-            frmCustomer.txtMobileNo.Text = dr.Cells(15).Value.ToString()
-            frmCustomer.txtNotes.Text = dr.Cells(17).Value.ToString()
+            frmCustomer.B_City.Text = dr.Cells(3).Value.ToString()
+
+            frmCustomer.B_State.Text = dr.Cells(4).Value.ToString()
+            frmCustomer.B_ZipCode.Text = dr.Cells(5).Value.ToString()
+
+
+            frmCustomer.txtPhone.Text = dr.Cells(6).Value.ToString()
+            frmCustomer.txtEmail.Text = dr.Cells(7).Value.ToString()
+            frmCustomer.txtMobileNo.Text = dr.Cells(8).Value.ToString()
+
+            frmCustomer.txtNotes.Text = dr.Cells(9).Value.ToString()
             frmCustomer.Update_Record.Enabled = True
             frmCustomer.Delete.Enabled = True
             frmCustomer.Save.Enabled = False
@@ -130,17 +134,17 @@ Public Class frmCustomersRecord3
             frmCustomer.B_name.Text = dr.Cells(1).Value.ToString()
 
             frmCustomer.B_Address.Text = dr.Cells(2).Value.ToString()
-            frmCustomer.B_City.Text = dr.Cells(4).Value.ToString()
+            frmCustomer.B_City.Text = dr.Cells(3).Value.ToString()
 
-            frmCustomer.B_State.Text = dr.Cells(5).Value.ToString()
-            frmCustomer.B_ZipCode.Text = dr.Cells(6).Value.ToString()
+            frmCustomer.B_State.Text = dr.Cells(4).Value.ToString()
+            frmCustomer.B_ZipCode.Text = dr.Cells(5).Value.ToString()
 
 
-            frmCustomer.txtPhone.Text = dr.Cells(13).Value.ToString()
-            frmCustomer.txtEmail.Text = dr.Cells(14).Value.ToString()
-            frmCustomer.txtMobileNo.Text = dr.Cells(15).Value.ToString()
+            frmCustomer.txtPhone.Text = dr.Cells(6).Value.ToString()
+            frmCustomer.txtEmail.Text = dr.Cells(7).Value.ToString()
+            frmCustomer.txtMobileNo.Text = dr.Cells(8).Value.ToString()
 
-            frmCustomer.txtNotes.Text = dr.Cells(17).Value.ToString()
+            frmCustomer.txtNotes.Text = dr.Cells(9).Value.ToString()
             frmCustomer.Update_Record.Enabled = True
             frmCustomer.Delete.Enabled = True
             frmCustomer.Save.Enabled = False

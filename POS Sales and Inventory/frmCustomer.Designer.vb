@@ -151,7 +151,7 @@ Partial Class frmCustomer
         Me.B_State.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest
         Me.B_State.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.B_State.FormattingEnabled = True
-        Me.B_State.Items.AddRange(New Object() {"Andaman & Nicobar", "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chandigarh", "Chhattisgarh", "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jammu and Kashmir", "Jharkhand", "Karnataka", "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram", "Nagaland", "New Delhi", "Orissa", "Puducherry", "Rajasthan", "Sikkim", "Tamil Nadu", "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal", "Dadra and Nagar Haveli", "Daman and Diu", "Lakshadweep"})
+        Me.B_State.Items.AddRange(New Object() {"Baringo County", "Bomet County", "Bungoma County", "Busia County", "Elgeyo Marakwet County", "Embu County", "Garissa County", "Homa Bay County", "Isiolo County", "Kajiado County", "Kakamega County", "Kericho County", "Kiambu County", "Kilifi County", "Kirinyaga County", "Kisii County", "Kisumu County", "Kitui County", "Kwale County", "Laikipia County", "Lamu County", "Machakos County", "Makueni County", "Mandera County", "Meru County", "Migori County", "Marsabit County", "Mombasa County", "Muranga County", "Nairobi County", "Nakuru County", "Nandi County", "Narok County", "Nyamira County", "Nyandarua County", "Nyeri County", "Samburu County", "Siaya County", "Taita Taveta County", "Tana River County", "Tharaka Nithi County", "Trans Nzoia County", "Turkana County", "Uasin Gishu County", "Vihiga County", "Wajir County", "West Pokot County"})
         Me.B_State.Location = New System.Drawing.Point(173, 172)
         Me.B_State.Name = "B_State"
         Me.B_State.Size = New System.Drawing.Size(192, 21)
@@ -243,7 +243,7 @@ Partial Class frmCustomer
         'B_ZipCode
         '
         Me.B_ZipCode.Location = New System.Drawing.Point(173, 208)
-        Me.B_ZipCode.Mask = "000000"
+        Me.B_ZipCode.Mask = "00000"
         Me.B_ZipCode.Name = "B_ZipCode"
         Me.B_ZipCode.Size = New System.Drawing.Size(74, 20)
         Me.B_ZipCode.TabIndex = 6
