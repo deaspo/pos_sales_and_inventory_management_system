@@ -248,6 +248,12 @@
     <Compile Include="frmStockDetails1.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmSupplier.Designer.vb">
+      <DependentUpon>frmSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmSuppliers.designer.vb">
       <DependentUpon>frmSuppliers.vb</DependentUpon>
     </Compile>
@@ -375,6 +381,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmStockDetails1.resx">
       <DependentUpon>frmStockDetails1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSupplier.resx">
+      <DependentUpon>frmSupplier.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSuppliers.resx">
       <DependentUpon>frmSuppliers.vb</DependentUpon>

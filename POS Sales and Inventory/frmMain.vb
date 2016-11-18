@@ -42,4 +42,5 @@ Public Class frmMain
     Private Sub CustomerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CustomerToolStripMenuItem.Click
         frmCustomer.showdialog
     End Sub
+
 End Class
