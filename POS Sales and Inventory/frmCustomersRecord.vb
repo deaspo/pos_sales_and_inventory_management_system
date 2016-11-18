@@ -17,7 +17,7 @@ Public Class frmCustomersRecord
         End Get
     End Property
     Public Function GetData() As DataView
-        Dim SelectQry = "SELECT (customerNo) as [Customer ID],(B_name) as [B_Name],(b_address) as [B_Address],(b_city) as [B_City],(b_state) as [B_State],(b_zipcode) as [B_Zip/Post Code],(Phone) as [Phone],(email)as [Email],(mobileno) as [Mobile No],(notes)as [Notes] from Customer order by customerno"
+        Dim SelectQry = "SELECT (customerNo) as [Customer ID],(B_name) as [Name],(b_address) as [Address],(b_city) as [City],(b_state) as [County],(b_zipcode) as [B_Zip/Post Code],(Phone) as [Phone],(email)as [Email],(mobileno) as [Mobile No],(notes)as [Notes] from Customer order by customerno"
 
         Dim SampleSource As New DataSet
         Dim TableView As DataView
@@ -36,26 +36,10 @@ Public Class frmCustomersRecord
         Return TableView
     End Function
 
-
-
-
-
-
-
-
-
     Private Sub frmCustomersRecord_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         fillName()
         DataGridView1.DataSource = GetData()
     End Sub
-
-
-
-
-
-
-
-
 
     Private Sub TabControl1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles TabControl1.Click
 
@@ -95,9 +79,6 @@ Public Class frmCustomersRecord
         End Try
     End Sub
 
-
-
-
     Sub fillName()
 
         Try
@@ -126,7 +107,7 @@ Public Class frmCustomersRecord
         Try
             con = New OleDbConnection(cs)
             con.Open()
-            cmd = New OleDbCommand("SELECT (customerNo)[Customer ID],(B_name)[B_Name],(b_address)[B_Address],(b_landmark)[B_LandMark],(b_city)[B_City],(b_state)[B_State],(b_zipcode)[B_Zip/Post Code],(s_name)[S_Name],(s_address)[S_Address],(s_landmark)[S_LandMark],(s_city)[S_City],(s_state)[S_State],(s_zipcode)[S_Zip/Post Code],(Phone)[Phone],(email)[Email],(mobileno)[Mobile No.],(faxno)[Fax No.],(notes)[Notes] from Customer where B_Name like '" & txtCustomer.Text & "%'  order by CustomerNo", con)
+            cmd = New OleDbCommand("SELECT (customerNo)[Customer ID],(B_name)[B_Name],(b_address)[B_Address],(b_city)[B_City],(b_state)[B_State],(b_zipcode)[B_Zip/Post Code],(Phone)[Phone],(email)[Email],(mobileno)[Mobile No.],(notes)[Notes] from Customer where B_Name like '" & txtCustomer.Text & "%'  order by CustomerNo", con)
 
 
 
@@ -157,7 +138,7 @@ Public Class frmCustomersRecord
         Try
             con = New OleDbConnection(cs)
             con.Open()
-            cmd = New OleDbCommand("SELECT (customerNo) as [Customer ID],(B_name) as [B_Name],(b_address) as [B_Address],(b_landmark) as [B_LandMark],(b_city) as [B_City],(b_state) as [B_State],(b_zipcode) as [B_Zip/Post Code],(s_name) as [S_Name],(s_address) as [S_Address],(s_landmark) as [S_LandMark],(s_city) as [S_City],(s_state) as [S_State],(s_zipcode) as [S_Zip/Post Code],(Phone) as [Phone],(email)as [Email],(mobileno) as [Mobile No],(faxno) as [Fax No],(notes)as [Notes] from Customer where B_Name = '" & txtName.Text & "'  order by CustomerNo", con)
+            cmd = New OleDbCommand("SELECT (customerNo) as [Customer ID],(B_name) as [Name],(b_address) as [Address],(b_city) as [City],(b_state) as [County],(b_zipcode) as [B_Zip/Post Code],(Phone) as [Phone],(email)as [Email],(mobileno) as [Mobile No],(notes)as [Notes] from Customer where B_Name = '" & txtName.Text & "'  order by CustomerNo", con)
 
 
 
