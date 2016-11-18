@@ -422,6 +422,9 @@ Public Class frmProductsRecord
             frmStock.txtProductName.Text = dr.Cells(1).Value.ToString()
             frmStock.txtCategory.Text = dr.Cells(2).Value.ToString()
             frmStock.txtWeight.Text = dr.Cells(3).Value.ToString()
+            frmStock.txtSupName.Text = dr.Cells(4).Value.ToString()
+            frmStock.txtSupId.Text = dr.Cells(5).Value.ToString()
+            frmStock.txtAddedBy.Text = dr.Cells(6).Value.ToString()
             frmStock.txtCartons.Focus()
 
         Catch ex As Exception
@@ -440,6 +443,9 @@ Public Class frmProductsRecord
             frmStock.txtProductName.Text = dr.Cells(1).Value.ToString()
             frmStock.txtCategory.Text = dr.Cells(2).Value.ToString()
             frmStock.txtWeight.Text = dr.Cells(3).Value.ToString()
+            frmStock.txtSupName.Text = dr.Cells(4).Value.ToString()
+            frmStock.txtSupId.Text = dr.Cells(5).Value.ToString()
+            frmStock.txtAddedBy.Text = dr.Cells(6).Value.ToString()
             frmStock.txtCartons.Focus()
 
         Catch ex As Exception
@@ -458,6 +464,9 @@ Public Class frmProductsRecord
             frmStock.txtProductName.Text = dr.Cells(1).Value.ToString()
             frmStock.txtCategory.Text = dr.Cells(2).Value.ToString()
             frmStock.txtWeight.Text = dr.Cells(3).Value.ToString()
+            frmStock.txtSupName.Text = dr.Cells(4).Value.ToString()
+            frmStock.txtSupId.Text = dr.Cells(5).Value.ToString()
+            frmStock.txtAddedBy.Text = dr.Cells(6).Value.ToString()
             frmStock.txtCartons.Focus()
 
         Catch ex As Exception
@@ -476,6 +485,9 @@ Public Class frmProductsRecord
             frmStock.txtProductName.Text = dr.Cells(1).Value.ToString()
             frmStock.txtCategory.Text = dr.Cells(2).Value.ToString()
             frmStock.txtWeight.Text = dr.Cells(3).Value.ToString()
+            frmStock.txtSupName.Text = dr.Cells(4).Value.ToString()
+            frmStock.txtSupId.Text = dr.Cells(5).Value.ToString()
+            frmStock.txtAddedBy.Text = dr.Cells(6).Value.ToString()
             frmStock.txtCartons.Focus()
 
         Catch ex As Exception
