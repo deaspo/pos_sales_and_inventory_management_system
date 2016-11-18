@@ -20,6 +20,9 @@ Public Class frmStock
         txtProductCode.Text = ""
         txtProductName.Text = ""
         txtTotalPackets.Text = ""
+        txtAddedBy.Text = ""
+        txtSupId.Text = ""
+        txtSupName.Text = ""
         dtpStockDate.Text = Today
         Button2.Focus()
     End Sub
@@ -32,7 +35,7 @@ Public Class frmStock
         End Get
     End Property
     Public Function GetData() As DataView
-        Dim SelectQry = "SELECT (ProductCode) as [Product Code],(ProductName) as [Product Name],(Weight) as [Weight],sum(Cartons) as [Cartons],Packets,Sum(TotalPackets) as [Total Packets] FROM stock where Cartons > 0 and TotalPackets > 0   group by ProductCode,ProductName,Weight,Packets order by ProductName "
+        Dim SelectQry = "SELECT (ProductCode) as [Product Code],(ProductName) as [Product Name],(Weight) as [Weight],(ProductBy) as [Product Added By],(SupplierName) as [Supplier Name],(SupplierNo) as [Supplier Code],sum(Cartons) as [Cartons],Packets,Sum(TotalPackets) as [Total Packets] FROM stock where Cartons > 0 and TotalPackets > 0   group by ProductCode,ProductName,Weight,Packets order by ProductName "
         Dim SampleSource As New DataSet
         Dim TableView As DataView
         Try
@@ -118,6 +121,24 @@ Public Class frmStock
             txtWeight.Focus()
             Exit Sub
         End If
+
+        If Len(Trim(txtAddedBy.Text)) = 0 Then
+            MessageBox.Show("Please select product registrar", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtAddedBy.Focus()
+            Exit Sub
+        End If
+        If Len(Trim(txtSupId.Text)) = 0 Then
+            MessageBox.Show("Please select supplier code", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtSupId.Focus()
+            Exit Sub
+        End If
+        If Len(Trim(txtSupName.Text)) = 0 Then
+            MessageBox.Show("Please select supplier name", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            txtSupName.Focus()
+            Exit Sub
+        End If
+
+
         If Len(Trim(txtCartons.Text)) = 0 Then
             MessageBox.Show("Please enter cartons", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
             txtCartons.Focus()
@@ -176,7 +197,7 @@ Public Class frmStock
                 con = New OleDbConnection(cs)
                 con.Open()
 
-                Dim cb As String = "insert into stock(StockID,productcode,productname,category,weight,stockdate,Cartons,Packets,TotalPackets) VALUES ('" & txtStockID.Text & "','" & txtProductCode.Text & "','" & txtProductName.Text & "','" & txtCategory.Text & "','" & txtWeight.Text & "','" & dtpStockDate.Text & "','" & CInt(txtCartons.Text) & "','" & CInt(txtPackets.Text) & "','" & CInt(txtTotalPackets.Text) & "')"
+                Dim cb As String = "insert into stock(StockID,productcode,productname,category,weight,productby,suppliername,supplierno,stockdate,Cartons,Packets,TotalPackets) VALUES ('" & txtStockID.Text & "','" & txtProductCode.Text & "','" & txtProductName.Text & "','" & txtCategory.Text & "','" & txtWeight.Text & "','" & txtAddedBy.Text & "','" & txtSupName.Text & "','" & txtSupId.Text & "','" & dtpStockDate.Text & "','" & CInt(txtCartons.Text) & "','" & CInt(txtPackets.Text) & "','" & CInt(txtTotalPackets.Text) & "')"
 
                 cmd = New OleDbCommand(cb)
 
@@ -215,7 +236,7 @@ Public Class frmStock
             con = New OleDbConnection(cs)
             con.Open()
 
-            Dim cb As String = "update stock set productcode = '" & txtProductCode.Text & "',productname='" & txtProductName.Text & "',category='" & txtCategory.Text & "',weight='" & txtWeight.Text & "',stockdate='" & dtpStockDate.Text & "',Cartons='" & CInt(txtCartons.Text) & "',Packets='" & CInt(txtPackets.Text) & "',TotalPackets='" & CInt(txtTotalPackets.Text) & "' where stockid='" & txtStockID.Text & "'"
+            Dim cb As String = "update stock set productcode = '" & txtProductCode.Text & "',productname='" & txtProductName.Text & "',category='" & txtCategory.Text & "',weight='" & txtWeight.Text & "',productby='" & txtAddedBy.Text & "',suppliername='" & txtSupName.Text & "',supplierno='" & txtSupId.Text & "',stockdate='" & dtpStockDate.Text & "',Cartons='" & CInt(txtCartons.Text) & "',Packets='" & CInt(txtPackets.Text) & "',TotalPackets='" & CInt(txtTotalPackets.Text) & "' where stockid='" & txtStockID.Text & "'"
 
             cmd = New OleDbCommand(cb)
 
