@@ -54,14 +54,6 @@ Partial Class frmMain
         Me.LogoutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CloudDigitalClock1 = New CloudToolkitN6.CloudDigitalClock()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.IDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.OrderDateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.EmployeeIDDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TaxDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.PaymentTypeDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TaxRateDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.OrderSubTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.OrderTotalDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.OrdersBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Product_inventoryDataSet1 = New POS_Sales_and_Inventory.product_inventoryDataSet()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
@@ -144,7 +136,7 @@ Partial Class frmMain
         'btnNewPurchase
         '
         Me.btnNewPurchase.BackColor = System.Drawing.Color.Transparent
-        Me.btnNewPurchase.ButtonText = "New Purchase"
+        Me.btnNewPurchase.ButtonText = "New Product"
         Me.btnNewPurchase.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnNewPurchase.DisabledColors = New System.Drawing.Color() {System.Drawing.Color.FromArgb(CType(CType(212, Byte), Integer), CType(CType(212, Byte), Integer), CType(CType(212, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(239, Byte), Integer), CType(CType(239, Byte), Integer), CType(CType(239, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer), CType(CType(224, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(251, Byte), Integer), CType(CType(251, Byte), Integer), CType(CType(251, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer), CType(CType(244, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer), CType(CType(235, Byte), Integer)), System.Drawing.Color.FromArgb(CType(CType(236, Byte), Integer), CType(CType(236, Byte), Integer), CType(CType(236, Byte), Integer))}
         Me.btnNewPurchase.ForeColor = System.Drawing.Color.FromArgb(CType(CType(69, Byte), Integer), CType(CType(105, Byte), Integer), CType(CType(152, Byte), Integer))
@@ -376,71 +368,12 @@ Partial Class frmMain
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView1.AutoGenerateColumns = False
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.IDDataGridViewTextBoxColumn, Me.OrderDateDataGridViewTextBoxColumn, Me.EmployeeIDDataGridViewTextBoxColumn, Me.TaxDataGridViewTextBoxColumn, Me.PaymentTypeDataGridViewTextBoxColumn, Me.TaxRateDataGridViewTextBoxColumn, Me.OrderSubTotalDataGridViewTextBoxColumn, Me.OrderTotalDataGridViewTextBoxColumn})
-        Me.DataGridView1.DataSource = Me.OrdersBindingSource4
         Me.DataGridView1.Location = New System.Drawing.Point(15, 184)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.Size = New System.Drawing.Size(974, 230)
         Me.DataGridView1.TabIndex = 8
-        '
-        'IDDataGridViewTextBoxColumn
-        '
-        Me.IDDataGridViewTextBoxColumn.DataPropertyName = "ID"
-        Me.IDDataGridViewTextBoxColumn.HeaderText = "ID"
-        Me.IDDataGridViewTextBoxColumn.Name = "IDDataGridViewTextBoxColumn"
-        Me.IDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'OrderDateDataGridViewTextBoxColumn
-        '
-        Me.OrderDateDataGridViewTextBoxColumn.DataPropertyName = "OrderDate"
-        Me.OrderDateDataGridViewTextBoxColumn.HeaderText = "OrderDate"
-        Me.OrderDateDataGridViewTextBoxColumn.Name = "OrderDateDataGridViewTextBoxColumn"
-        Me.OrderDateDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'EmployeeIDDataGridViewTextBoxColumn
-        '
-        Me.EmployeeIDDataGridViewTextBoxColumn.DataPropertyName = "EmployeeID"
-        Me.EmployeeIDDataGridViewTextBoxColumn.HeaderText = "EmployeeID"
-        Me.EmployeeIDDataGridViewTextBoxColumn.Name = "EmployeeIDDataGridViewTextBoxColumn"
-        Me.EmployeeIDDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TaxDataGridViewTextBoxColumn
-        '
-        Me.TaxDataGridViewTextBoxColumn.DataPropertyName = "Tax"
-        Me.TaxDataGridViewTextBoxColumn.HeaderText = "Tax"
-        Me.TaxDataGridViewTextBoxColumn.Name = "TaxDataGridViewTextBoxColumn"
-        Me.TaxDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'PaymentTypeDataGridViewTextBoxColumn
-        '
-        Me.PaymentTypeDataGridViewTextBoxColumn.DataPropertyName = "PaymentType"
-        Me.PaymentTypeDataGridViewTextBoxColumn.HeaderText = "PaymentType"
-        Me.PaymentTypeDataGridViewTextBoxColumn.Name = "PaymentTypeDataGridViewTextBoxColumn"
-        Me.PaymentTypeDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'TaxRateDataGridViewTextBoxColumn
-        '
-        Me.TaxRateDataGridViewTextBoxColumn.DataPropertyName = "TaxRate"
-        Me.TaxRateDataGridViewTextBoxColumn.HeaderText = "TaxRate"
-        Me.TaxRateDataGridViewTextBoxColumn.Name = "TaxRateDataGridViewTextBoxColumn"
-        Me.TaxRateDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'OrderSubTotalDataGridViewTextBoxColumn
-        '
-        Me.OrderSubTotalDataGridViewTextBoxColumn.DataPropertyName = "OrderSubTotal"
-        Me.OrderSubTotalDataGridViewTextBoxColumn.HeaderText = "OrderSubTotal"
-        Me.OrderSubTotalDataGridViewTextBoxColumn.Name = "OrderSubTotalDataGridViewTextBoxColumn"
-        Me.OrderSubTotalDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'OrderTotalDataGridViewTextBoxColumn
-        '
-        Me.OrderTotalDataGridViewTextBoxColumn.DataPropertyName = "OrderTotal"
-        Me.OrderTotalDataGridViewTextBoxColumn.HeaderText = "OrderTotal"
-        Me.OrderTotalDataGridViewTextBoxColumn.Name = "OrderTotalDataGridViewTextBoxColumn"
-        Me.OrderTotalDataGridViewTextBoxColumn.ReadOnly = True
         '
         'OrdersBindingSource4
         '
@@ -646,14 +579,6 @@ Partial Class frmMain
     Friend WithEvents StandardCostDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents SupplierIDDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
     Friend WithEvents BelowTargetLevelDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents IDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents OrderDateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents EmployeeIDDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TaxDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents PaymentTypeDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents TaxRateDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents OrderSubTotalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents OrderTotalDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents OrdersBindingSource3 As BindingSource
     Friend WithEvents Product_inventoryDataSet1 As product_inventoryDataSet
     Friend WithEvents OrdersBindingSource4 As BindingSource

@@ -102,6 +102,7 @@ Public Class frmSupplier
     Private Sub frmSupplier_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         Me.Hide()
         frmMain.Show()
+        frmMain.TodayOrders()
     End Sub
 
     Private Sub NewRecord_Click(sender As Object, e As EventArgs) Handles NewRecord.Click

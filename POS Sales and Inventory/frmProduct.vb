@@ -444,7 +444,8 @@ Public Class frmProduct
 
     Private Sub frmProduct_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         Me.Hide()
-        FrmMain.Show()
+        frmMain.Show()
+        frmMain.TodayOrders()
     End Sub
     Private Sub frmProduct_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         fillCategory()

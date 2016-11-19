@@ -1,6 +1,40 @@
 ﻿Imports System.ComponentModel
+Imports System.Data.OleDb
 
 Public Class frmMain
+    Dim rdr As OleDbDataReader = Nothing
+    Dim dtable As DataTable
+    Dim con As OleDbConnection = Nothing
+    Dim adp As OleDbDataAdapter
+    Dim ds As DataSet
+    Dim cmd As OleDbCommand = Nothing
+    Dim dt As New DataTable
+
+    Dim cs As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\SI_DB.accdb;Persist Security Info=False;"
+
+    Public Sub TodayOrders()
+        Try
+            con = New OleDbConnection(cs)
+
+            con.Open()
+            cmd = New OleDbCommand("SELECT (OrderNo) as [Order No],(OrderDate) as [Order Date],(OrderStatus) as [Order Status],(CustomerNo) as [Customer ID],(CustomerName) as [Customer Name],(TotalAmount)as [Total Amount] from Orderinfo where OrderStatus='Uncompleted' and OrderDate between #" & Today & "# And #" & Today & "# order by orderinfo.OrderNo,OrderDate", con)
+
+            Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
+
+            Dim myDataSet As DataSet = New DataSet()
+
+            myDA.Fill(myDataSet, "OrderInfo")
+
+            DataGridView1.DataSource = myDataSet.Tables("Orderinfo").DefaultView
+
+            con.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+
+
     Private Sub frmMain_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         Me.Hide()
         frmLogin.Show()
@@ -14,6 +48,8 @@ Public Class frmMain
 
         Me.LayoutMdi(MdiLayout.TileVertical)
 
+
+        TodayOrders()
     End Sub
 
     Private Sub OrderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrderToolStripMenuItem.Click
@@ -40,10 +76,22 @@ Public Class frmMain
     End Sub
 
     Private Sub CustomerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CustomerToolStripMenuItem.Click
-        frmCustomer.showdialog
+        frmCustomer.ShowDialog()
     End Sub
 
     Private Sub SupplierToolStripMenuItem1_Click(sender As Object, e As EventArgs) Handles SupplierToolStripMenuItem1.Click
         frmSupplier.ShowDialog()
+    End Sub
+
+    Private Sub btnNewOrder_Click(sender As Object, e As EventArgs) Handles btnNewOrder.Click
+        frmOrder.ShowDialog()
+
+        frmOrder.clear()
+    End Sub
+
+    Private Sub btnNewPurchase_Click(sender As Object, e As EventArgs) Handles btnNewPurchase.Click
+        frmProduct.ShowDialog()
+
+        frmProduct.clear()
     End Sub
 End Class

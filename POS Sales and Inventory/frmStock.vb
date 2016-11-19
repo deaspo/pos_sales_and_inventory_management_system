@@ -225,6 +225,7 @@ Public Class frmStock
     Private Sub frmStock_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         Me.Hide()
         frmMain.Show()
+        frmMain.TodayOrders()
     End Sub
 
     Private Sub frmStock_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

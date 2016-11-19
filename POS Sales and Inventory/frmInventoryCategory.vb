@@ -246,7 +246,8 @@ Public Class frmInventoryCategory
 
     Private Sub frmInventoryCategory_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
         Me.Hide()
-        FrmMain.Show()
+        frmMain.Show()
+        frmMain.TodayOrders()
     End Sub
 
 
