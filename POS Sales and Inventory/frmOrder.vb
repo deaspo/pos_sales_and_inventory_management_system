@@ -64,6 +64,7 @@ Public Class frmOrder
         Me.Hide()
         frmMain.Show()
         frmMain.TodayOrders()
+        frmMain.ReorderStock()
     End Sub
 
     Private Sub frmOrder_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

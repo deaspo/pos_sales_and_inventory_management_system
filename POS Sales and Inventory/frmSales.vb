@@ -372,6 +372,7 @@ Public Class frmSales
         Me.Hide()
         frmMain.Show()
         frmMain.TodayOrders()
+        frmMain.ReorderStock()
     End Sub
 
     Private Sub frmSales_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

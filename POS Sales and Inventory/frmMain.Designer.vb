@@ -57,13 +57,6 @@ Partial Class frmMain
         Me.OrdersBindingSource4 = New System.Windows.Forms.BindingSource(Me.components)
         Me.Product_inventoryDataSet1 = New POS_Sales_and_Inventory.product_inventoryDataSet()
         Me.DataGridView2 = New System.Windows.Forms.DataGridView()
-        Me.ProductIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ReorderLevelDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.TargetLevelDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ReorderQuantityDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.StandardCostDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.SupplierIDDataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.BelowTargetLevelDataGridViewTextBoxColumn = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.InventoryToReorderBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
         Me.OrderDetailsTableAdapter = New POS_Sales_and_Inventory.product_inventoryDataSetTableAdapters.OrderDetailsTableAdapter()
         Me.OrdersBindingSource3 = New System.Windows.Forms.BindingSource(Me.components)
@@ -391,64 +384,12 @@ Partial Class frmMain
         Me.DataGridView2.AllowUserToDeleteRows = False
         Me.DataGridView2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.DataGridView2.AutoGenerateColumns = False
         Me.DataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView2.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ProductIDDataGridViewTextBoxColumn1, Me.ReorderLevelDataGridViewTextBoxColumn1, Me.TargetLevelDataGridViewTextBoxColumn1, Me.ReorderQuantityDataGridViewTextBoxColumn1, Me.StandardCostDataGridViewTextBoxColumn, Me.SupplierIDDataGridViewTextBoxColumn1, Me.BelowTargetLevelDataGridViewTextBoxColumn})
-        Me.DataGridView2.DataSource = Me.InventoryToReorderBindingSource1
         Me.DataGridView2.Location = New System.Drawing.Point(15, 468)
         Me.DataGridView2.Name = "DataGridView2"
         Me.DataGridView2.ReadOnly = True
         Me.DataGridView2.Size = New System.Drawing.Size(974, 281)
         Me.DataGridView2.TabIndex = 9
-        '
-        'ProductIDDataGridViewTextBoxColumn1
-        '
-        Me.ProductIDDataGridViewTextBoxColumn1.DataPropertyName = "ProductID"
-        Me.ProductIDDataGridViewTextBoxColumn1.HeaderText = "ProductID"
-        Me.ProductIDDataGridViewTextBoxColumn1.Name = "ProductIDDataGridViewTextBoxColumn1"
-        Me.ProductIDDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'ReorderLevelDataGridViewTextBoxColumn1
-        '
-        Me.ReorderLevelDataGridViewTextBoxColumn1.DataPropertyName = "ReorderLevel"
-        Me.ReorderLevelDataGridViewTextBoxColumn1.HeaderText = "ReorderLevel"
-        Me.ReorderLevelDataGridViewTextBoxColumn1.Name = "ReorderLevelDataGridViewTextBoxColumn1"
-        Me.ReorderLevelDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'TargetLevelDataGridViewTextBoxColumn1
-        '
-        Me.TargetLevelDataGridViewTextBoxColumn1.DataPropertyName = "TargetLevel"
-        Me.TargetLevelDataGridViewTextBoxColumn1.HeaderText = "TargetLevel"
-        Me.TargetLevelDataGridViewTextBoxColumn1.Name = "TargetLevelDataGridViewTextBoxColumn1"
-        Me.TargetLevelDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'ReorderQuantityDataGridViewTextBoxColumn1
-        '
-        Me.ReorderQuantityDataGridViewTextBoxColumn1.DataPropertyName = "ReorderQuantity"
-        Me.ReorderQuantityDataGridViewTextBoxColumn1.HeaderText = "ReorderQuantity"
-        Me.ReorderQuantityDataGridViewTextBoxColumn1.Name = "ReorderQuantityDataGridViewTextBoxColumn1"
-        Me.ReorderQuantityDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'StandardCostDataGridViewTextBoxColumn
-        '
-        Me.StandardCostDataGridViewTextBoxColumn.DataPropertyName = "StandardCost"
-        Me.StandardCostDataGridViewTextBoxColumn.HeaderText = "StandardCost"
-        Me.StandardCostDataGridViewTextBoxColumn.Name = "StandardCostDataGridViewTextBoxColumn"
-        Me.StandardCostDataGridViewTextBoxColumn.ReadOnly = True
-        '
-        'SupplierIDDataGridViewTextBoxColumn1
-        '
-        Me.SupplierIDDataGridViewTextBoxColumn1.DataPropertyName = "SupplierID"
-        Me.SupplierIDDataGridViewTextBoxColumn1.HeaderText = "SupplierID"
-        Me.SupplierIDDataGridViewTextBoxColumn1.Name = "SupplierIDDataGridViewTextBoxColumn1"
-        Me.SupplierIDDataGridViewTextBoxColumn1.ReadOnly = True
-        '
-        'BelowTargetLevelDataGridViewTextBoxColumn
-        '
-        Me.BelowTargetLevelDataGridViewTextBoxColumn.DataPropertyName = "BelowTargetLevel"
-        Me.BelowTargetLevelDataGridViewTextBoxColumn.HeaderText = "BelowTargetLevel"
-        Me.BelowTargetLevelDataGridViewTextBoxColumn.Name = "BelowTargetLevelDataGridViewTextBoxColumn"
-        Me.BelowTargetLevelDataGridViewTextBoxColumn.ReadOnly = True
         '
         'InventoryToReorderBindingSource1
         '
@@ -572,13 +513,6 @@ Partial Class frmMain
     Friend WithEvents InventoryToReorderBindingSource As BindingSource
     Friend WithEvents InventoryToReorderTableAdapter As product_inventoryDataSetTableAdapters.InventoryToReorderTableAdapter
     Friend WithEvents OrdersBindingSource2 As BindingSource
-    Friend WithEvents ProductIDDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents ReorderLevelDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents TargetLevelDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents ReorderQuantityDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents StandardCostDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
-    Friend WithEvents SupplierIDDataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
-    Friend WithEvents BelowTargetLevelDataGridViewTextBoxColumn As DataGridViewTextBoxColumn
     Friend WithEvents OrdersBindingSource3 As BindingSource
     Friend WithEvents Product_inventoryDataSet1 As product_inventoryDataSet
     Friend WithEvents OrdersBindingSource4 As BindingSource

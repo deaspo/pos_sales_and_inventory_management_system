@@ -33,7 +33,27 @@ Public Class frmMain
         End Try
     End Sub
 
+    Public Sub ReorderStock()
+        Try
 
+            con = New OleDbConnection(cs)
+
+            con.Open()
+            cmd = New OleDbCommand("SELECT (StockID)as [Stock ID],(StockDate)as [Entry Date],(ProductCode) as [Product Code],(ProductName) as [Product Name],(Category) as [Category],(Weight) as [Weight/Qty],(SupplierName) as [Supplier Name],(SupplierNo) as [Supplier ID],(ProductBy) as [Product Added By],(Cartons) as [Cartons],(Packets) as [Packets],(TotalPackets) as [Total Packets] from Stock where Cartons < 4 order by ProductName", con)
+
+            Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
+
+            Dim myDataSet As DataSet = New DataSet()
+
+            myDA.Fill(myDataSet, "Stock")
+
+            DataGridView2.DataSource = myDataSet.Tables("Stock").DefaultView
+
+            con.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
 
     Private Sub frmMain_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
         Me.Hide()
@@ -50,6 +70,7 @@ Public Class frmMain
 
 
         TodayOrders()
+        ReorderStock()
     End Sub
 
     Private Sub OrderToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OrderToolStripMenuItem.Click

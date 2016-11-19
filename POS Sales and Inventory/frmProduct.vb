@@ -446,6 +446,7 @@ Public Class frmProduct
         Me.Hide()
         frmMain.Show()
         frmMain.TodayOrders()
+        frmMain.ReorderStock()
     End Sub
     Private Sub frmProduct_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         fillCategory()

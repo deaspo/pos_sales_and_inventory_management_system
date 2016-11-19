@@ -248,6 +248,7 @@ Public Class frmInventoryCategory
         Me.Hide()
         frmMain.Show()
         frmMain.TodayOrders()
+        frmMain.ReorderStock()
     End Sub
 
 

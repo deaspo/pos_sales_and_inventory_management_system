@@ -103,6 +103,7 @@ Public Class frmSupplier
         Me.Hide()
         frmMain.Show()
         frmMain.TodayOrders()
+        frmMain.ReorderStock()
     End Sub
 
     Private Sub NewRecord_Click(sender As Object, e As EventArgs) Handles NewRecord.Click
