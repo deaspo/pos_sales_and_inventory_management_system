@@ -11,6 +11,7 @@ Public Class frmMain
     Dim dt As New DataTable
 
     Dim cs As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\SI_DB.accdb;Persist Security Info=False;"
+    Dim cs2 As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\product_inventory.accdb"
 
     Public Sub TodayOrders()
         Try
@@ -115,4 +116,81 @@ Public Class frmMain
 
         frmProduct.clear()
     End Sub
+
+    Private Sub CalculatorToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CalculatorToolStripMenuItem.Click
+        Try
+            System.Diagnostics.Process.Start("Calc.exe")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub NotepadToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NotepadToolStripMenuItem.Click
+        Try
+            System.Diagnostics.Process.Start("Notepad.exe")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub TaskManagerToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TaskManagerToolStripMenuItem.Click
+        Try
+            System.Diagnostics.Process.Start("TaskMgr.exe")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub MSWordToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MSWordToolStripMenuItem.Click
+        Try
+            System.Diagnostics.Process.Start("Winword.exe")
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+    Private Sub SystemInfoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SystemInfoToolStripMenuItem.Click
+        frmSystemInfo.Show()
+    End Sub
+
+    Private Sub LoginDetailsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LoginDetailsToolStripMenuItem.Click
+        Me.Hide()
+        frmLoginDetails.Show()
+    End Sub
+
+    Private Sub EmployeesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmployeesToolStripMenuItem.Click
+
+        Try
+            con = New OleDbConnection(cs2)
+
+            con.Open()
+            cmd = New OleDbCommand("SELECT Login FROM Employees WHERE ([Level] = 'admin') AND (Login = '" & tlName.Text & "')", con)
+
+            Dim myDA As OleDbDataAdapter = New OleDbDataAdapter(cmd)
+
+            Dim myDataSet As DataSet = New DataSet()
+
+            myDA.Fill(myDataSet, "Employees")
+
+
+            Dim tmpLogin As String = ((myDataSet.Tables("Employees").DefaultView).Table.Rows.Item(0)).ItemArray(0)
+
+            If tlName.Text <> tmpLogin Then
+                MessageBox.Show("You do not have administrative rights", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
+                Exit Sub
+
+            ElseIf tlName.Text Is tmpLogin Then
+
+            End If
+
+            con.Close()
+
+        Catch ex As Exception
+            Throw ex
+
+            MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
+        End Try
+    End Sub
+
+
 End Class

@@ -41,9 +41,17 @@ Partial Class frmMain
         Me.OrdersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PurchasesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ManageToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EmployeesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LoginDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.AboutToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CalculatorToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NotepadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TaskManagerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MSWordToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SystemInfoToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.WordpadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip2 = New System.Windows.Forms.MenuStrip()
         Me.CustomerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SupplierToolStripMenuItem1 = New System.Windows.Forms.ToolStripMenuItem()
@@ -210,7 +218,7 @@ Partial Class frmMain
         '
         'MenuStrip1
         '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductsToolStripMenuItem, Me.OrdersToolStripMenuItem, Me.PurchasesToolStripMenuItem, Me.ReportsToolStripMenuItem, Me.ToolsToolStripMenuItem, Me.ManageToolStripMenuItem, Me.AboutToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ProductsToolStripMenuItem, Me.OrdersToolStripMenuItem, Me.PurchasesToolStripMenuItem, Me.ReportsToolStripMenuItem, Me.ManageToolStripMenuItem, Me.AboutToolStripMenuItem, Me.ToolsToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.Size = New System.Drawing.Size(989, 24)
@@ -241,23 +249,79 @@ Partial Class frmMain
         Me.ReportsToolStripMenuItem.Size = New System.Drawing.Size(59, 20)
         Me.ReportsToolStripMenuItem.Text = "Reports"
         '
-        'ToolsToolStripMenuItem
-        '
-        Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
-        Me.ToolsToolStripMenuItem.Text = "Tools"
-        '
         'ManageToolStripMenuItem
         '
+        Me.ManageToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmployeesToolStripMenuItem, Me.LoginDetailsToolStripMenuItem})
         Me.ManageToolStripMenuItem.Name = "ManageToolStripMenuItem"
-        Me.ManageToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
-        Me.ManageToolStripMenuItem.Text = "Manage"
+        Me.ManageToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
+        Me.ManageToolStripMenuItem.Text = "Employees"
+        '
+        'EmployeesToolStripMenuItem
+        '
+        Me.EmployeesToolStripMenuItem.Name = "EmployeesToolStripMenuItem"
+        Me.EmployeesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EmployeesToolStripMenuItem.Text = "Registration"
+        '
+        'LoginDetailsToolStripMenuItem
+        '
+        Me.LoginDetailsToolStripMenuItem.Name = "LoginDetailsToolStripMenuItem"
+        Me.LoginDetailsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.LoginDetailsToolStripMenuItem.Text = "Login Details"
         '
         'AboutToolStripMenuItem
         '
         Me.AboutToolStripMenuItem.Name = "AboutToolStripMenuItem"
         Me.AboutToolStripMenuItem.Size = New System.Drawing.Size(52, 20)
         Me.AboutToolStripMenuItem.Text = "About"
+        '
+        'ToolsToolStripMenuItem
+        '
+        Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CalculatorToolStripMenuItem, Me.NotepadToolStripMenuItem, Me.TaskManagerToolStripMenuItem, Me.MSWordToolStripMenuItem, Me.SystemInfoToolStripMenuItem, Me.WordpadToolStripMenuItem})
+        Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
+        Me.ToolsToolStripMenuItem.Text = "Tools"
+        '
+        'CalculatorToolStripMenuItem
+        '
+        Me.CalculatorToolStripMenuItem.Image = CType(resources.GetObject("CalculatorToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.CalculatorToolStripMenuItem.Name = "CalculatorToolStripMenuItem"
+        Me.CalculatorToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CalculatorToolStripMenuItem.Text = "Calculator"
+        '
+        'NotepadToolStripMenuItem
+        '
+        Me.NotepadToolStripMenuItem.Image = CType(resources.GetObject("NotepadToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.NotepadToolStripMenuItem.Name = "NotepadToolStripMenuItem"
+        Me.NotepadToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.NotepadToolStripMenuItem.Text = "Notepad"
+        '
+        'TaskManagerToolStripMenuItem
+        '
+        Me.TaskManagerToolStripMenuItem.Image = CType(resources.GetObject("TaskManagerToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.TaskManagerToolStripMenuItem.Name = "TaskManagerToolStripMenuItem"
+        Me.TaskManagerToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.TaskManagerToolStripMenuItem.Text = "Task Manager"
+        '
+        'MSWordToolStripMenuItem
+        '
+        Me.MSWordToolStripMenuItem.Image = CType(resources.GetObject("MSWordToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.MSWordToolStripMenuItem.Name = "MSWordToolStripMenuItem"
+        Me.MSWordToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.MSWordToolStripMenuItem.Text = "MS Word"
+        '
+        'SystemInfoToolStripMenuItem
+        '
+        Me.SystemInfoToolStripMenuItem.Image = CType(resources.GetObject("SystemInfoToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.SystemInfoToolStripMenuItem.Name = "SystemInfoToolStripMenuItem"
+        Me.SystemInfoToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.SystemInfoToolStripMenuItem.Text = "System Info"
+        '
+        'WordpadToolStripMenuItem
+        '
+        Me.WordpadToolStripMenuItem.Image = CType(resources.GetObject("WordpadToolStripMenuItem.Image"), System.Drawing.Image)
+        Me.WordpadToolStripMenuItem.Name = "WordpadToolStripMenuItem"
+        Me.WordpadToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.WordpadToolStripMenuItem.Text = "Wordpad"
         '
         'MenuStrip2
         '
@@ -494,7 +558,6 @@ Partial Class frmMain
     Friend WithEvents OrdersToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PurchasesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ReportsToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ToolsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ManageToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents AboutToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MenuStrip2 As MenuStrip
@@ -518,4 +581,13 @@ Partial Class frmMain
     Friend WithEvents OrdersBindingSource4 As BindingSource
     Friend WithEvents InventoryToReorderBindingSource1 As BindingSource
     Friend WithEvents SupplierToolStripMenuItem1 As ToolStripMenuItem
+    Friend WithEvents EmployeesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents LoginDetailsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CalculatorToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents NotepadToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents TaskManagerToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents MSWordToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents SystemInfoToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents WordpadToolStripMenuItem As ToolStripMenuItem
 End Class
