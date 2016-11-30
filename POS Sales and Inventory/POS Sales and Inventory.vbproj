@@ -109,6 +109,12 @@
     <Compile Include="frmCustomersRecord3.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="frmEmployees.Designer.vb">
+      <DependentUpon>frmEmployees.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEmployees.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frmInventoryCategory.designer.vb">
       <DependentUpon>frmInventoryCategory.vb</DependentUpon>
     </Compile>
@@ -318,6 +324,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmCustomersRecord3.resx">
       <DependentUpon>frmCustomersRecord3.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEmployees.resx">
+      <DependentUpon>frmEmployees.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmInventoryCategory.resx">
       <DependentUpon>frmInventoryCategory.vb</DependentUpon>

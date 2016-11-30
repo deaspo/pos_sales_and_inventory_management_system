@@ -159,7 +159,22 @@ Public Class frmMain
     End Sub
 
     Private Sub EmployeesToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles EmployeesToolStripMenuItem.Click
+        Dim tmpLogin As String = GetUserName()
 
+        If tlName.Text <> tmpLogin Then
+            MessageBox.Show("You do not have administrative rights", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
+            Exit Sub
+
+        ElseIf tlName.Text = tmpLogin Then
+
+            frmEmployees.ShowDialog()
+
+        End If
+
+    End Sub
+
+    Public Function GetUserName() As String
+        Dim tmpLogin As String = ""
         Try
             con = New OleDbConnection(cs2)
 
@@ -173,16 +188,7 @@ Public Class frmMain
             myDA.Fill(myDataSet, "Employees")
 
 
-            Dim tmpLogin As String = ((myDataSet.Tables("Employees").DefaultView).Table.Rows.Item(0)).ItemArray(0)
-
-            If tlName.Text <> tmpLogin Then
-                MessageBox.Show("You do not have administrative rights", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Error)
-                Exit Sub
-
-            ElseIf tlName.Text Is tmpLogin Then
-
-            End If
-
+            tmpLogin = ((myDataSet.Tables("Employees").DefaultView).Table.Rows.Item(0)).ItemArray(0)
             con.Close()
 
         Catch ex As Exception
@@ -190,7 +196,7 @@ Public Class frmMain
 
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End Try
-    End Sub
-
+        Return tmpLogin
+    End Function
 
 End Class
